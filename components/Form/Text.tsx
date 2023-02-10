@@ -20,7 +20,7 @@ const Text: React.FC<propsType & inputType> = ({
   return (
     <div className={"relative"}>
       <p className="b1 text-neutral-1 mb-2 ">{title}</p>
-      {error && <Danger size="28" className={"absolute left-2 top-[50px] text-red-light-3 animate-fadeIn"} />}
+      {error && <Danger size="28" className={"absolute left-2 top-[50px] text-red-light-5 animate-fadeIn"} />}
 
       <Input
         type={"text"}
@@ -32,7 +32,7 @@ const Text: React.FC<propsType & inputType> = ({
         disabled={disabled}
       />
 
-      <p className={"mt-2 text-red-light-3 h-4 b2"}>{error}</p>
+      <p className={"mt-1 text-red-light-5 h-4 b2"}>{error}</p>
     </div>
   );
 };
