@@ -1,18 +1,47 @@
-import './globals.css'
+"use client";
+import React from "react";
+import "@/global/globals.css";
+import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
+import {ConfigProvider} from "antd";
+import {Provider} from "react-redux";
+import {PersistGate} from "redux-persist/integration/react";
+import {classNames} from "@/utils/functions";
+import {childrenType} from "@/global/types";
+import {peyda} from "@/utils/assets/font/font-const"
+import store, {storePersist} from "@/store";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const RootLayout: React.FC<childrenType> = ({children}) => {
+
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
+    <html lang = "fa" className = {`${peyda.variable}`}>
+    <head/>
+    <ConfigProvider
+      theme = {{
+        token: {
+          fontFamily: `${peyda.variable}`,
+          colorLink: "#283040",
+          colorPrimary: "#1E6DFA",
+        },
+      }}
+    >
+      <Provider store = {store}>
+        <PersistGate loading = {null} persistor = {storePersist}>
+          {
+            () => (<>
+              <body className = {classNames("px-4 lg:px-16 body-sm")}>
+              <Header/>
+              <main>{children}</main>
+              <Footer/>
+              </body>
+            </>)
+          }
+
+        </PersistGate>
+      </Provider>
+    </ConfigProvider>
     </html>
-  )
-}
+  );
+};
+
+export default RootLayout;
