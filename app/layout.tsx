@@ -12,14 +12,13 @@ import {peyda} from "@/utils/assets/font/font-const"
 import store, {storePersist} from "@/store";
 
 const RootLayout: React.FC<childrenType> = ({children}) => {
-
   return (
     <html lang = "fa" className = {`${peyda.variable}`}>
     <head/>
     <ConfigProvider
       theme = {{
         token: {
-          fontFamily: `${peyda.variable}`,
+          fontFamily: 'var(--font-peyda)',
           colorLink: "#283040",
           colorPrimary: "#1E6DFA",
         },
@@ -29,7 +28,7 @@ const RootLayout: React.FC<childrenType> = ({children}) => {
         <PersistGate loading = {null} persistor = {storePersist}>
           {
             () => (<>
-              <body className = {classNames("px-4 lg:px-16 body-sm")}>
+              <body className = {classNames("b1")}>
               <Header/>
               <main>{children}</main>
               <Footer/>
