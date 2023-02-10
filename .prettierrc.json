@@ -1,0 +1,5 @@
+{
+  "printWidth": 120,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120
+}
