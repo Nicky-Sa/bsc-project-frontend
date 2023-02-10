@@ -1,29 +1,34 @@
 import React, { useEffect, useState } from "react";
 import Button from "@/components/UI/Button";
 import Text from "@/components/Form/Text";
-import { changeInputs, checkEmail, checkPassword } from "@/utils/functions";
+import { changeInputs, checkEmail, checkPassword, checkPasswordMatch } from "@/utils/functions";
 import Password from "@/components/Form/Password";
+import Form from "@/components/Form/Form";
+import { tip } from "@/utils/texts";
 
-const LoginForm: React.FC = () => {
+const SignUpForm: React.FC = () => {
   const [inputs, setInputs] = useState({
     username: "",
     password: "",
+    confirmPassword: "",
   });
   const [errors, setErrors] = useState({
     username: "",
     password: "",
+    confirmPassword: "",
   });
   useEffect(() => {
     setErrors({
       ...errors,
       username: checkEmail(inputs.username),
       password: checkPassword(inputs.password),
+      confirmPassword: checkPasswordMatch(inputs.password, inputs.confirmPassword),
     });
   }, [inputs]);
 
   const onChange = changeInputs(setInputs, inputs);
   return (
-    <form className={"flex flex-col gap-8"}>
+    <Form>
       <Text
         name={"username"}
         state={inputs.username}
@@ -39,10 +44,19 @@ const LoginForm: React.FC = () => {
         title={"رمز عبور"}
         error={errors.password}
         onChange={onChange}
+        tip={tip.password}
       />
-      <Button variation={"fill"}>ورود</Button>
-    </form>
+      <Password
+        name={"password"}
+        state={inputs.confirmPassword}
+        placeholder={"تکرار رمز عبور"}
+        title={"تکرار رمز عبور"}
+        error={errors.confirmPassword}
+        onChange={onChange}
+      />
+      <Button variation={"fill"}>ثبت‌نام</Button>
+    </Form>
   );
 };
 
-export default LoginForm;
+export default SignUpForm;

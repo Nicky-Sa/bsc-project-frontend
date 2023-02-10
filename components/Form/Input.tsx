@@ -25,10 +25,10 @@ const Input: React.FC<propsType & inputType> = ({
       placeholder={placeholder}
       className={classNames(
         disabled ? "cursor-not-allowed" : "",
-        "b1 bg-transparent text-neutral-2 focus:bg-transparent active:bg-transparent w-full rounded-md b1 p-2 border-2 focus:ring-0 focus:outline-0",
+        "b1 bg-transparent text-neutral-2 w-full rounded-md b1 p-2 border-2 focus:ring-0 focus:outline-0",
         error
           ? "border-red-light-3"
-          : "border-primary-light-3 focus:border-primary-dark-6 hover:border-primary-dark-4 transition-all duration-200"
+          : " border-primary-dark-4 hover:border-primary-light-3 focus:border-primary-light-3 transition-all duration-200"
       )}
       onChange={onChange}
     />

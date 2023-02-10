@@ -20,7 +20,7 @@ const Text: React.FC<propsType & inputType> = ({
   return (
     <div className={"relative"}>
       <p className="b1 text-neutral-1 mb-2 ">{title}</p>
-      {error && <Danger size="32" className={"absolute left-2 top-[52px] text-red-light-3 animate-fadeIn"} />}
+      {error && <Danger size="28" className={"absolute left-2 top-[50px] text-red-light-3 animate-fadeIn"} />}
 
       <Input
         type={"text"}
