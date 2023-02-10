@@ -21,6 +21,7 @@ const RootLayout: React.FC<childrenType> = ({children}) => {
           fontFamily: 'var(--font-peyda)',
           colorLink: "#283040",
           colorPrimary: "#1E6DFA",
+          fontSize: 16,
         },
       }}
     >
