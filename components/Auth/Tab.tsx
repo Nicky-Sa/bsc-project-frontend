@@ -23,9 +23,9 @@ const Tab: React.FC<propsType> = ({tabItems}) => {
               "transition-all duration-300 flex flex-col gap-2 focus:ring-0 focus:outline-0 justify-center items-center"
             )}
           >
-            <p className={classNames(selectedIndex === i ? "text-neutral-1" : "text-neutral-3", "px-8 b1")}>
+            <h6 className={classNames(selectedIndex === i ? "text-neutral-1" : "text-neutral-3", "px-8 h6")}>
               {item.label}
-            </p>
+            </h6>
             <div
               className={classNames(
                 selectedIndex === i ? "opacity-100" : "opacity-0",

@@ -43,6 +43,13 @@ img {
   height: 100%;
 }
 
+.Toastify__toast-container{
+  min-width: fit-content !important;
+}
+
+.toast-body{
+  font-family: var(--font-peyda), serif !important;
+}
 
 @layer components {
 

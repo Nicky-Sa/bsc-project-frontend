@@ -4,16 +4,19 @@ import Button from "@/components/UI/Button";
 
 type propsType = {
   buttonName: string;
-  onSubmit?: () => void; //TODO: mandatory
+  onSubmit: () => void;
+  buttonDisabled: boolean;
 };
 
-const Form: React.FC<childrenType & propsType> = ({ children, buttonName, onSubmit }) => {
+const Form: React.FC<childrenType & propsType> = ({ children, buttonName, onSubmit, buttonDisabled = true }) => {
   return (
-    <form className={"flex flex-col gap-5"}>
-    {children}
-      <Button variation={"fill"} className={"mt-4"} onClick={onSubmit}>{buttonName}</Button>
-
-    </form>);
+    <div className={"flex flex-col gap-5"}>
+      {children}
+      <Button disabled={buttonDisabled} variation={"fill"} className={"mt-4"} onClick={onSubmit}>
+        {buttonName}
+      </Button>
+    </div>
+  );
 };
 
 export default Form;

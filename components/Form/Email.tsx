@@ -6,7 +6,7 @@ type propsType = {
   disabled?: boolean;
 };
 
-const Text: React.FC<propsType & inputType> = ({
+const Email: React.FC<propsType & inputType> = ({
   name,
   title,
   placeholder,
@@ -20,7 +20,7 @@ const Text: React.FC<propsType & inputType> = ({
 
       <Input
         title={title}
-        type={"text"}
+        type={"email"}
         name={name}
         error={error}
         placeholder={placeholder}
@@ -32,4 +32,4 @@ const Text: React.FC<propsType & inputType> = ({
   );
 };
 
-export default Text;
+export default Email;

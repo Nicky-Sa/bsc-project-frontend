@@ -10,6 +10,7 @@ import { classNames } from "@/utils/functions";
 import { childrenType } from "@/global/types";
 import { peyda } from "@/utils/assets/font/font-const";
 import store, { storePersist } from "@/store";
+import Toast from "@/components/Notification/Toast";
 
 const RootLayout: React.FC<childrenType> = ({ children }) => {
   return (
@@ -33,6 +34,7 @@ const RootLayout: React.FC<childrenType> = ({ children }) => {
                   <Header />
                   <main>{children}</main>
                   <Footer />
+                  <Toast />
                 </body>
               </>
             )}

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Text from "@/components/Form/Text";
-import { changeInputs, checkEmail, checkPassword, checkPasswordMatch } from "@/utils/functions";
+import Email from "@/components/Form/Email";
+import { canSubmit, changeInputs, checkEmail, checkPassword, checkPasswordMatch } from "@/components/Form/functions";
 import Password from "@/components/Form/Password";
 import Form from "@/components/Form/Form";
+import AuthAPI from "@/services/api/AuthAPI";
+import { authHandler } from "@/components/Auth/functions";
 
 const SignUpForm: React.FC = () => {
   const [inputs, setInputs] = useState({
@@ -25,9 +27,11 @@ const SignUpForm: React.FC = () => {
   }, [inputs]);
 
   const onChange = changeInputs(setInputs, inputs);
+  const onSubmit = authHandler(inputs, AuthAPI.signup);
+
   return (
-    <Form buttonName={"ثبت‌نام"}>
-      <Text
+    <Form buttonName={"ثبت‌نام"} buttonDisabled={canSubmit(inputs, errors)} onSubmit={onSubmit}>
+      <Email
         name={"username"}
         state={inputs.username}
         placeholder={"ایمیل"}
