@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Button from "@/components/UI/Button";
 import Text from "@/components/Form/Text";
 import { changeInputs, checkEmail, checkPassword } from "@/utils/functions";
 import Password from "@/components/Form/Password";
+import Form from "@/components/Form/Form";
 
 const LoginForm: React.FC = () => {
   const [inputs, setInputs] = useState({
@@ -23,7 +23,7 @@ const LoginForm: React.FC = () => {
 
   const onChange = changeInputs(setInputs, inputs);
   return (
-    <form className={"flex flex-col gap-8"}>
+    <Form buttonName={"ورود"}>
       <Text
         name={"username"}
         state={inputs.username}
@@ -40,8 +40,7 @@ const LoginForm: React.FC = () => {
         error={errors.password}
         onChange={onChange}
       />
-      <Button variation={"fill"}>ورود</Button>
-    </form>
+    </Form>
   );
 };
 

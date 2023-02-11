@@ -21,7 +21,7 @@ const Auth: React.FC = () => {
     <div className={"relative w-full h-full py-24 2xl:py-12"}>
       <img src={authBg.src} alt={"bg"} className={"hidden xl:block px-8 w-full 2xl:w-[80%] h-auto m-auto"} />
       <div
-        className={"xl:absolute w-full md:w-1/3 xl:w-[25%] 2xl:w-[19%] m-auto right-[14%] 2xl:right-[22%] top-[13%] 2xl:top-[8%] flex flex-col gap-8 justify-between items-center"}
+        className={"xl:absolute w-full sm:w-2/3 md:w-1/3 xl:w-[25%] 2xl:w-[19%] m-auto right-[14%] 2xl:right-[22%] top-[13%] 2xl:top-[9%] flex flex-col gap-8 justify-between items-center"}
       >
         <img src={logo.src} className={"w-32 h-auto"} alt={"logo"} />
         <Tab tabItems={tabItems} />

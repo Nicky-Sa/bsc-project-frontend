@@ -5,9 +5,17 @@ import { classNames } from "@/utils/functions";
 type propsType = {
   variation: "outline" | "fill" | "text";
   disabled?: boolean;
+  className?: string;
+  onClick?: () => void; //TODO: mandatory
 };
 
-const Button: React.FC<propsType & childrenType> = ({ children, variation, disabled = false }) => {
+const Button: React.FC<propsType & childrenType> = ({
+  children,
+  variation,
+  disabled = false,
+  className: extraClass,
+  onClick,
+}) => {
   let className = "";
   switch (variation) {
     case "fill":
@@ -19,8 +27,10 @@ const Button: React.FC<propsType & childrenType> = ({ children, variation, disab
   return (
     <>
       <button
+        onClick={onClick}
         disabled={disabled}
         className={classNames(
+          extraClass as string,
           disabled ? "grayscale cursor-not-allowed" : "transition duration-500",
           "py-2 w-full rounded-md text-neutral-1",
           className

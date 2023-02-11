@@ -1,4 +1,5 @@
 export type inputType = {
+  title: string;
   name: string;
   placeholder: string;
   state: string;

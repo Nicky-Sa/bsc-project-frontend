@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Button from "@/components/UI/Button";
 import Text from "@/components/Form/Text";
 import { changeInputs, checkEmail, checkPassword, checkPasswordMatch } from "@/utils/functions";
 import Password from "@/components/Form/Password";
 import Form from "@/components/Form/Form";
-import { tip } from "@/utils/texts";
 
 const SignUpForm: React.FC = () => {
   const [inputs, setInputs] = useState({
@@ -28,7 +26,7 @@ const SignUpForm: React.FC = () => {
 
   const onChange = changeInputs(setInputs, inputs);
   return (
-    <Form>
+    <Form buttonName={"ثبت‌نام"}>
       <Text
         name={"username"}
         state={inputs.username}
@@ -44,17 +42,15 @@ const SignUpForm: React.FC = () => {
         title={"رمز عبور"}
         error={errors.password}
         onChange={onChange}
-        tip={tip.password}
       />
       <Password
-        name={"password"}
+        name={"confirmPassword"}
         state={inputs.confirmPassword}
         placeholder={"تکرار رمز عبور"}
         title={"تکرار رمز عبور"}
         error={errors.confirmPassword}
         onChange={onChange}
       />
-      <Button variation={"fill"}>ثبت‌نام</Button>
     </Form>
   );
 };

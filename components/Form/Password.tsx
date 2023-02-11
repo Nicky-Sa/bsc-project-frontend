@@ -1,29 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { classNames } from "@/utils/functions";
 import { Eye, EyeSlash } from "iconsax-react";
 import Input from "@/components/Form/Input";
 import { inputType } from "@/components/Form/types";
 
-type propsType = {
-  title: string;
-  tip?: string;
-};
-
-const Password: React.FC<propsType & inputType> = ({ name, title, placeholder, state, onChange, error, tip }) => {
+const Password: React.FC<inputType> = ({ title, name, placeholder, state, onChange, error }) => {
   const [showPassword, setShowPassword] = useState(false);
-  const [showTip, setShowTip] = useState(tip && !error);
-  useEffect(() => {
-    setShowTip(tip && !error);
-  }, [tip, error]);
 
   const eyesClassName = classNames(
     !state ? "text-transparent" : "text-neutral-2",
-    "transition-all duration-500 absolute left-2 top-[52px] cursor-pointer animate-fadeIn"
+    "transition-all duration-500 absolute left-2 top-[48px] cursor-pointer animate-fadeIn"
   );
 
   return (
     <div className={"relative"}>
-      <p className="b1 text-neutral-1 mb-2 ">{title}</p>
       {!showPassword ? (
         <Eye
           size="28"
@@ -43,6 +33,7 @@ const Password: React.FC<propsType & inputType> = ({ name, title, placeholder, s
       )}
 
       <Input
+        title={title}
         type={showPassword ? "text" : "password"}
         name={name}
         error={error}
@@ -50,12 +41,6 @@ const Password: React.FC<propsType & inputType> = ({ name, title, placeholder, s
         state={state}
         onChange={onChange}
       />
-
-      {
-        <p className={classNames(showTip ? "text-neutral-5" : "text-red-light-5", "b2 mt-1 h-4")}>
-          {showTip ? tip : error}
-        </p>
-      }
     </div>
   );
 };
