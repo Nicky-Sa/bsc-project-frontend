@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Email from "@/components/Form/Email";
-import { canSubmit, changeInputs, checkEmail, checkPassword } from "@/components/Form/functions";
+import { canSubmit, changeInputs, checkEmail } from "@/components/Form/functions";
 import Password from "@/components/Form/Password";
 import Form from "@/components/Form/Form";
 import AuthAPI from "@/services/api/AuthAPI";
@@ -13,13 +13,11 @@ const LoginForm: React.FC = () => {
   });
   const [errors, setErrors] = useState({
     username: "",
-    password: "",
   });
   useEffect(() => {
     setErrors({
       ...errors,
       username: checkEmail(inputs.username),
-      password: checkPassword(inputs.password),
     });
   }, [inputs]);
 
@@ -41,7 +39,6 @@ const LoginForm: React.FC = () => {
         state={inputs.password}
         placeholder={"رمز عبور"}
         title={"رمز عبور"}
-        error={errors.password}
         onChange={onChange}
       />
     </Form>

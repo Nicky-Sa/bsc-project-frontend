@@ -19,10 +19,10 @@ const Button: React.FC<propsType & childrenType> = ({
   let className = "";
   switch (variation) {
     case "fill":
-      className = "bg-gradient-to-r from-primary-dark-3 to-primary-dark-1 hover:opacity-80; ";
+      className = "bg-gradient-to-r from-primary-dark-3 to-primary-dark-1 hover:opacity-80";
       break;
     case "outline":
-      className = "border-2 border-primary-light-3 hover:border-primary-dark-;2";
+      className = "border-2 border-primary-light-3 hover:border-primary-dark-2";
   }
   return (
     <>
