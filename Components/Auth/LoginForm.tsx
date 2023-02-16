@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from "react";
 import Email from "@/Components/Form/Email";
 import { canSubmit, changeInputs, checkEmail } from "@/Components/Form/functions";

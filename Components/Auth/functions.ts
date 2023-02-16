@@ -1,7 +1,6 @@
 import { errorNotify, successNotify } from "@/Components/Notification/Toast";
 import { authType } from "@/services/api/types";
 import { AxiosResponse } from "axios";
-import UsersAPI from "@/services/api/UsersAPI";
 import { translateErrors } from "@/utils/functions";
 import { toastRedirectTimeout } from "@/utils/consts";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
@@ -19,8 +18,6 @@ export const authHandler = (
           password: inputs.password,
         })
       ).data;
-      const user = await UsersAPI.getUser();
-      console.log(user);
       successNotify(data.message);
       setTimeout(() => {
         router.replace("/dashboard");

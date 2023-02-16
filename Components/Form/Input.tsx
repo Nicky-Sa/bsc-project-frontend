@@ -4,7 +4,7 @@ import { inputType } from "@/Components/Form/types";
 import { Danger } from "iconsax-react";
 
 type propsType = {
-  type: "email" | "text" | "password";
+  type: "email" | "text" | "password" | "search";
   disabled?: boolean;
 };
 
@@ -19,6 +19,7 @@ const Input: React.FC<propsType & inputType> = ({
   disabled = false,
 }) => {
   const [showError, setShowError] = useState(false);
+
   return (
     <>
       {error && showError && type !== "password" && (
@@ -28,6 +29,8 @@ const Input: React.FC<propsType & inputType> = ({
       <p className="b1 text-neutral-1 mb-1">{title}</p>
 
       <input
+        autoComplete={"on"}
+        autoFocus = {name === "username"}
         onBlur={() => setShowError(true)}
         disabled={disabled}
         type={type}

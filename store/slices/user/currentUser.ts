@@ -24,3 +24,5 @@ const slice = createSlice({
 
 export const {setCurrentUser} = slice.actions;
 export const currentUserReducer = slice.reducer;
+
+//  const userInfo = useSelector((state: storeType) => state.currentUserReducer.userInfo)

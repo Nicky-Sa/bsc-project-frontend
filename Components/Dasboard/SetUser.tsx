@@ -2,22 +2,35 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import * as userActions from "@/store/slices/user/currentUser";
+import { usePathname, useRouter } from "next/navigation";
 
 type propsType = {
   user: any;
 };
 
 const SetUser: React.FC<propsType> = ({ user }) => {
-  // const selectedPolygons = useSelector((state: RootState) => state.selectedPolygonsReducer.polygons)
   const dispatch = useDispatch();
+  const pathname = usePathname();
+  const router = useRouter();
+  console.log(pathname)
 
   useEffect(() => {
     console.log(user)
-    if (user) {
+    if (user) { // authorised
       dispatch(userActions.setCurrentUser(user));
+      if(pathname?.startsWith("/auth")){
+        router.replace("/dashboard");
+      }
     }
-  }, [dispatch, user]);
-  return <div />;
+    else{ // unauthorised
+      if(pathname?.startsWith("/dashboard")){
+        router.replace("/auth");
+      }
+    }
+
+  }, [dispatch, pathname, router, user]);
+
+  return null;
 };
 
 export default SetUser;

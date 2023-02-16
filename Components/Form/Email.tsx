@@ -17,7 +17,6 @@ const Email: React.FC<propsType & inputType> = ({
 }) => {
   return (
     <div className={"relative"}>
-
       <Input
         title={title}
         type={"email"}
