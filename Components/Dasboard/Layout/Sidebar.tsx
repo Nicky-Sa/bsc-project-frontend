@@ -1,24 +1,21 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { dashboardNavigation } from "@/utils/consts";
 import { classNames } from "@/utils/functions";
-import { usePathname } from "next/navigation";
-import { Home2, Map1, MessageQuestion, Moneys } from "iconsax-react";
 import CopyRight from "@/Components/UI/CopyRight";
-
-const dashboardNavigation = [
-  { name: "خانه", href: "/dashboard", icon: Home2 },
-  { name: "تاریخچه‌ی موقعیت‌ها", href: "/dashboard/history", icon: Map1 },
-  { name: "امور مالی", href: "/dashboard/finance", icon: Moneys },
-  { name: "سوالات متداول", href: "/dashboard/faq", icon: MessageQuestion },
-];
+import { usePathname } from "next/navigation";
 
 const Sidebar: React.FC = () => {
   const pathname = usePathname();
   return (
-    <aside className="py-6 px-1 md:px-4 flex flex-col gap-12 min-h-full w-[13%] lg:w-[18%] z-10 bg-primary-dark-5 rounded-2xl items-center justify-between py-6 overflow-y-auto ">
-      <Link href="/" className={"mt-2 hidden lg:block"}>
-        <img className="w-40 h-auto" src="/logo.png" alt="" />
+    <div
+      className={
+        "py-6 px-1 md:px-4 flex flex-col gap-12 items-center justify-between bg-primary-dark-5 overflow-y-auto min-h-full lg:rounded-2xl"
+      }
+    >
+      <Link href="/" className={"mt-2"}>
+        <img className="w-1/2 h-auto m-auto" src="/logo.png" alt="logo" />
       </Link>
       <nav className="w-full flex-grow flex flex-col justify-start gap-6">
         {dashboardNavigation.map((item) => {
@@ -39,7 +36,7 @@ const Sidebar: React.FC = () => {
         })}
       </nav>
       <CopyRight />
-    </aside>
+    </div>
   );
 };
 

@@ -11,3 +11,12 @@
 .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-active{
   background-color: #5F39D6
 }
+.ant-drawer .ant-drawer-body {
+  background-color: #1D1D41;
+  padding: 0;
+}
+
+.ant-drawer .ant-drawer-header{
+  background-color: #1D1D41;
+padding: 12px;
+}

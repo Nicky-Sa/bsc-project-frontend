@@ -1,13 +1,12 @@
 import React from "react";
-import { getUser } from "@/utils/functions";
-import { redirect } from "next/navigation";
-import SetUser from "@/Components/Dasboard/SetUser";
-import { cookies } from "next/headers";
-import Sidebar from "@/Components/Dasboard/Layout/Sidebar";
+import SidebarFixed from "@/Components/Dasboard/Layout/SidebarFixed";
 import Main from "@/Components/Dasboard/Layout/Main";
 import Header from "@/Components/Dasboard/Layout/Header";
+import { cookies } from "next/headers";
+import { getUser } from "@/utils/functions";
+import { redirect } from "next/navigation";
 
-//TODO: instead of (home), add dashboard layout and (home) here.
+//TODO: fix the comment
 
 const DashboardLayout: ({ children }: { children: any }) => Promise<JSX.Element> = async ({ children }) => {
   /*
@@ -22,9 +21,9 @@ const DashboardLayout: ({ children }: { children: any }) => Promise<JSX.Element>
 
   return (
     <div className={"p-4 flex flex-row gap-6 bg-primary-dark-7 min-h-screen"}>
-      <SetUser user={user} />
-      <Sidebar />
-      <div className={"flex flex-col w-[87%] lg:w-[82%] pt-6 gap-6"}>
+      {/*<SetUser user={user} />*/}
+      <SidebarFixed />
+      <div className={"flex flex-col w-full pt-6 gap-6"}>
         <Header />
         <Main>{children}</Main>
       </div>

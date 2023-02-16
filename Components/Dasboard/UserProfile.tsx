@@ -1,6 +1,6 @@
 import React from "react";
 import { Logout, ProfileCircle, User } from "iconsax-react";
-import DropDown from "@/Components/Dasboard/DropDown";
+import DropDown from "@/Components/UI/DropDown";
 import IconText from "@/Components/UI/IconText";
 
 const dropdownItems = [
