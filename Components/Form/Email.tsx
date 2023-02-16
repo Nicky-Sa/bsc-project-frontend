@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "@/components/Form/Input";
-import { inputType } from "@/components/Form/types";
+import Input from "@/Components/Form/Input";
+import { inputType } from "@/Components/Form/types";
 
 type propsType = {
   disabled?: boolean;

@@ -1,6 +1,6 @@
 import React from "react";
 import { childrenType } from "@/global/types";
-import Button from "@/components/UI/Button";
+import Button from "@/Components/UI/Button";
 
 type propsType = {
   buttonName: string;

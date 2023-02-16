@@ -1,10 +1,11 @@
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import React from "react";
+import { toastRedirectTimeout } from "@/utils/consts";
 
 const options = {
   position: toast.POSITION.BOTTOM_RIGHT,
-  autoClose: 4500,
+  autoClose: toastRedirectTimeout,
   hideProgressBar: false,
   closeOnClick: true,
   pauseOnHover: true,

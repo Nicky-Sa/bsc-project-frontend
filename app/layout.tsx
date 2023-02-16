@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import "@/global/globals.css";
-import Header from "@/components/Layout/Header";
-import Footer from "@/components/Layout/Footer";
 import { ConfigProvider } from "antd";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
@@ -10,7 +8,7 @@ import { classNames } from "@/utils/functions";
 import { childrenType } from "@/global/types";
 import { peyda } from "@/utils/assets/font/font-const";
 import store, { storePersist } from "@/store";
-import Toast from "@/components/Notification/Toast";
+import Toast from "@/Components/Notification/Toast";
 
 const RootLayout: React.FC<childrenType> = ({ children }) => {
   return (
@@ -30,10 +28,10 @@ const RootLayout: React.FC<childrenType> = ({ children }) => {
           <PersistGate loading={null} persistor={storePersist}>
             {() => (
               <>
-                <body className={classNames("b1")}>
-                  <Header />
+                <body
+                  className={classNames("b1", "min-h-[100vh] bg-gradient-to-r from-primary-dark-10 to-primary-dark-2")}
+                >
                   <main>{children}</main>
-                  <Footer />
                   <Toast />
                 </body>
               </>

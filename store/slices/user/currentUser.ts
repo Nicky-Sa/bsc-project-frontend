@@ -1,16 +1,23 @@
-import {createSlice} from "@reduxjs/toolkit";
-import {userState} from "@/store/slices/user/type";
+import { createSlice } from "@reduxjs/toolkit";
+import { userState } from "@/store/slices/user/type";
 
 const initialState: userState = {
-  id: 0
-}
+  userInfo: {
+    createdAt: "",
+    updatedAt: "",
+    username: "",
+    phoneNumber: null,
+    fullName: null,
+    role: "",
+  },
+};
 
 const slice = createSlice({
   name: "currentUser",
   initialState,
   reducers: {
     setCurrentUser: (state, action) => {
-      state.id = action.payload.id
+      state.userInfo = action.payload
     },
   },
 });

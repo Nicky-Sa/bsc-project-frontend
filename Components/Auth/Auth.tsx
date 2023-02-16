@@ -1,9 +1,9 @@
 import React from "react";
-import authBg from "@/components/Auth/assets/bg.png";
+import authBg from "@/Components/Auth/assets/bg.png";
 import logo from "@/public/logo.png";
-import Tab from "@/components/Auth/Tab";
-import LoginForm from "@/components/Auth/LoginForm";
-import SignUpForm from "@/components/Auth/SignupForm";
+import Tab from "@/Components/Auth/Tab";
+import LoginForm from "@/Components/Auth/LoginForm";
+import SignUpForm from "@/Components/Auth/SignupForm";
 
 const tabItems = [
   {

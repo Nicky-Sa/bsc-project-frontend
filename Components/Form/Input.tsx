@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { classNames } from "@/utils/functions";
-import { inputType } from "@/components/Form/types";
+import { inputType } from "@/Components/Form/types";
 import { Danger } from "iconsax-react";
 
 type propsType = {

@@ -1,10 +1,13 @@
 import axios from "axios";
 import { baseRoute } from "@/utils/consts";
+import { cookie } from "@/services/api/types";
+import { parseCookie } from "@/services/api/functions";
 
 export default class UsersAPI {
-  static init() {
+  static init(cookies: cookie[]) {
     let headers = {
       Accept: "application/json",
+      Cookie: parseCookie(cookies),
     };
 
     return axios.create({
@@ -15,7 +18,7 @@ export default class UsersAPI {
     });
   }
 
-  static getUser = async () => {
-    return await this.init().get("/current");
+  static getUser = async (cookies: cookie[]) => {
+    return await this.init(cookies).get("/current");
   };
 }

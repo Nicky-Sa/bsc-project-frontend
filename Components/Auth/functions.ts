@@ -1,10 +1,16 @@
-import { errorNotify, successNotify } from "@/components/Notification/Toast";
+import { errorNotify, successNotify } from "@/Components/Notification/Toast";
 import { authType } from "@/services/api/types";
 import { AxiosResponse } from "axios";
 import UsersAPI from "@/services/api/UsersAPI";
 import { translateErrors } from "@/utils/functions";
+import { toastRedirectTimeout } from "@/utils/consts";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
 
-export const authHandler = (inputs: any, apiHandler: { (data: authType): Promise<AxiosResponse> }) => {
+export const authHandler = (
+  inputs: any,
+  apiHandler: { (data: authType): Promise<AxiosResponse> },
+  router: AppRouterInstance
+) => {
   return async () => {
     try {
       const data = (
@@ -16,6 +22,9 @@ export const authHandler = (inputs: any, apiHandler: { (data: authType): Promise
       const user = await UsersAPI.getUser();
       console.log(user);
       successNotify(data.message);
+      setTimeout(() => {
+        router.replace("/dashboard");
+      }, toastRedirectTimeout);
     } catch (error) {
       errorNotify(translateErrors(error));
       console.log(error);
