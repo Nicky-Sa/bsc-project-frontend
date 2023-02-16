@@ -1,9 +1,11 @@
 import Auth from "@/Components/Auth/Auth";
+import CopyRight from "@/Components/UI/CopyRight";
 
 export default function AuthPage() {
   return (
-    <main className={"flex items-center justify-center px-4 md:px-8 "}>
+    <main>
       <Auth />
+      <CopyRight />
     </main>
   );
 }

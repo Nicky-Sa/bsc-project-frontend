@@ -16,7 +16,11 @@ const AuthLayout: ({ children }: { children: any }) => Promise<JSX.Element> = as
   }
 
   return (
-    <div className={"p-4"}>
+    <div
+      className={
+        "p-4 min-h-screen bg-gradient-to-r from-primary-dark-10 to-primary-dark-2 flex items-center justify-center px-4 md:px-8"
+      }
+    >
       <SetUser user={user} />
       {children}
     </div>

@@ -1,0 +1,13 @@
+.ant-dropdown .ant-dropdown-menu{
+  background-color: #1D1D41;
+  padding: 8px;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item{
+  color: white;
+  padding: 4px 0;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-active{
+  background-color: #5F39D6
+}

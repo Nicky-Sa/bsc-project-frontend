@@ -28,10 +28,8 @@ const RootLayout: React.FC<childrenType> = ({ children }) => {
           <PersistGate loading={null} persistor={storePersist}>
             {() => (
               <>
-                <body
-                  className={classNames("b1", "min-h-[100vh] bg-gradient-to-r from-primary-dark-10 to-primary-dark-2")}
-                >
-                  <main>{children}</main>
+                <body className={classNames("b1")}>
+                  {children}
                   <Toast />
                 </body>
               </>

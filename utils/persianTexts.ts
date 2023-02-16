@@ -1,3 +1,4 @@
+
 export enum PersianErrors {
   minLength8 = "طول رمز عبور باید ۸ کاراکتر باشد.",
   passwordUppercase = "رمز عبور باید شامل حداقل یک حرف بزرگ باشد.",
@@ -10,3 +11,6 @@ export enum PersianErrors {
   networkError = "مشکل از سمت سرور است. اندکی صبر کنید یا به پشتیبانی اطلاع دهید.",
 }
 
+export enum PersianConstants {
+  copyRight = "ساخته شده با مهر در تهران ۱۴۰۱"
+}
