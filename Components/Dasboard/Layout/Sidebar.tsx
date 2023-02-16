@@ -26,7 +26,7 @@ const Sidebar: React.FC = () => {
               href={item.href}
               className={classNames(
                 isCurrent ? "bg-primary-dark-1" : "hover:bg-primary-dark-8 transition-all duration-500",
-                "flex flex-row justify-start items-center p-3 pb-4 rounded-md gap-4"
+                "flex flex-row justify-start items-center p-3 pb-4 rounded-md gap-4 text-neutral-1"
               )}
             >
               {React.createElement(item.icon)}
