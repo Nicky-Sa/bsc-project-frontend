@@ -11,8 +11,8 @@ const DarkContainer: React.FC<childrenType & propsType> = ({ children, className
     <div
       className={classNames(
         className as string,
-        "rounded-2xl bg-primary-dark-5",
-        size === "fit" ? "p-2 " : "p-4"
+        "w-full rounded-2xl bg-primary-dark-5",
+        size === "fit" ? "p-2 " : "py-4 px-6"
       )}
     >
       {children}

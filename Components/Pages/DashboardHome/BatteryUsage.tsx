@@ -11,13 +11,15 @@ const MultiColumnChart = dynamic(() => import("@/Components/Charts/MultiColumnCh
   ssr: false,
 });
 
+
 const BatteryUsage: React.FC = () => {
     return (
       <DarkContainer className={"basis-1/2 flex flex-col gap-4"} size={"free"}>
         <h6 className={"h6"}>نمودار مصرف باتری</h6>
-        <MultiColumnChart data={devicesBattery} />
+        <MultiColumnChart data={devicesBattery} fields={["month", "value", "tagNumber"]} />
       </DarkContainer>
   );
 };
+
 
 export default BatteryUsage;

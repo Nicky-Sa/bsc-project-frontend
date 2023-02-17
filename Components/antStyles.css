@@ -4,7 +4,7 @@
 }
 
 .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item {
-  color: white;
+  color: #E5E5E5;
   padding: 4px 0;
 }
 
@@ -28,4 +28,28 @@
 .g2-tooltip-title, .g2-tooltip-list{
   font-family: peyda, serif ;
   direction: ltr;
+}
+
+.ant-table-wrapper .ant-table {
+  background-color: transparent !important;
+  color: #E5E5E5 !important;
+}
+
+.ant-table-wrapper .ant-table-tbody >tr >td {
+  border-bottom: 1px solid #323232 !important;
+  background-color: transparent !important;
+  color: #E5E5E5 !important;
+}
+
+.ant-table-wrapper .ant-table-thead >tr>th{
+  border-bottom: 1px solid #323232 !important;
+  background-color: #272752 !important;
+  color: #E5E5E5 !important;
+}
+
+.ant-table-wrapper .ant-table-thead >tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before{
+  background-color: transparent !important;
+}
+.ant-table-wrapper .ant-table-container table>thead>tr:first-child >*:first-child, .ant-table-wrapper .ant-table-container table>thead>tr:first-child >*:last-child{
+  border-radius: 0 !important;
 }

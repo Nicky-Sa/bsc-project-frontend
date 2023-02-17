@@ -7,7 +7,7 @@ const dropdownItems = [
   {
     key: "1",
     label: (
-      <IconText containerClass={"min-w-[10rem] items-center text-neutral-1"}>
+      <IconText className={"min-w-[10rem] items-center text-neutral-1"}>
         <ProfileCircle size="20" />
         <p>پروفایل</p>
       </IconText>
@@ -16,7 +16,7 @@ const dropdownItems = [
   {
     key: "2",
     label: (
-      <IconText containerClass={"text-red-light-6 items-center"}>
+      <IconText className={"text-red-light-6 items-center"}>
         <Logout size="20" />
         <p>خروج</p>
       </IconText>
@@ -29,7 +29,7 @@ const UserProfile: React.FC = () => {
     <div className={"flex flex-row gap-2 b1"}>
       <div className={" -mb-[3px]"}>
         <DropDown items={dropdownItems}>
-          <IconText containerClass={"items-start b1"}>
+          <IconText className={"items-start b1"}>
             <User size="26" />
             <p>نیک وین</p>
           </IconText>

@@ -13,7 +13,7 @@ const Map = dynamic(() => import("@/Components/Map/Map"), {
 const CurrentLocationMap: React.FC = () => {
   return (
     <DarkContainer size={"fit"} className={"relative"}>
-      <div className={"absolute z-20 top-[3%] right-[4%]"}>
+      <div className={"absolute z-20 top-[16px] right-[52px]"}>
         <Chips className={"bg-green-dark-1 shadow-md"}>
           <p className={"b1"}>موقعیت زنده تگ‌ها</p>
         </Chips>
