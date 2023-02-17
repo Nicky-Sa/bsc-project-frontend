@@ -1,6 +1,7 @@
 import React from "react";
 import { Crown1 } from "iconsax-react";
 import IconText from "@/Components/UI/IconText";
+import Chips from "@/Components/UI/Chips";
 
 type propsType = {
   level: "gold" | "silver" | "bronze";
@@ -8,26 +9,29 @@ type propsType = {
 
 const Package: React.FC<propsType> = ({ level }) => {
   let iconClassName = "";
-  let packageName = ""
+  let packageName = "";
   switch (level) {
     case "gold":
       iconClassName += "text-badge-gold";
-      packageName = "طلایی"
+      packageName = "طلایی";
       break;
     case "silver":
       iconClassName += "text-badge-silver";
-      packageName = "نقره‌ای"
+      packageName = "نقره‌ای";
       break;
     case "bronze":
       iconClassName += "text-badge-bronze";
-      packageName = "برنز"
+      packageName = "برنز";
       break;
   }
-  return <IconText containerClass={"bg-neutral-2/30 rounded-full items-center px-4"} size={"b2"}>
-    <Crown1 size={"20"} className={iconClassName}/>
-    <p>پکیچ {packageName}</p>
-  </IconText>
-
+  return (
+    <Chips className={"bg-neutral-2/30"}>
+      <IconText size={"b2"}>
+        <Crown1 size={"20"} className={iconClassName} />
+        <p>پکیچ {packageName}</p>
+      </IconText>
+    </Chips>
+  );
 };
 
 export default Package;
