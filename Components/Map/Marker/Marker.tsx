@@ -9,13 +9,14 @@ import "@/Components/antStyles.css";
 const Marker: React.FC<coordinateType> = ({ lon, lat }) => {
   const [address, setAddress] = useState("");
 
-  const getAddress = async (location: coordinateType) => {
-    try {
-      const address = (await MapAPI.coordinateToAddress(location)).data.address;
-      setAddress(address);
-    } catch (error) {
-      console.log(error);
-    }
+  const getAddress = (location: coordinateType) => {
+    MapAPI.coordinateToAddress(location)
+      .then((response) => {
+        setAddress(response.data.address);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   useEffect(() => {

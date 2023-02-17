@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Sidebar from "@/Components/Dasboard/Layout/Sidebar";
+import Sidebar from "@/Components/Dashboard/Layout/Sidebar";
 
 const SidebarFixed: React.FC = () => {
   return (

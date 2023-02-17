@@ -1,7 +1,7 @@
 import React from "react";
 import Package from "@/Components/UI/Package";
-import UserProfile from "@/Components/Dasboard/UserProfile";
-import SidebarDrawer from "@/Components/Dasboard/Layout/SidebarDrawer";
+import UserProfile from "@/Components/Dashboard/UserProfile";
+import SidebarDrawer from "@/Components/Dashboard/Layout/SidebarDrawer";
 
 const Header: React.FC = () => {
   return (

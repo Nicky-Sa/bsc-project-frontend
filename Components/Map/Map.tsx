@@ -4,25 +4,10 @@ import React from "react";
 import Mapir from "mapir-react-component";
 import "mapir-react-component/dist/index.css";
 import { mapStyles } from "@/Components/Map/mapStyles";
-import MultipleMarkers from "@/Components/Map/Marker/MultipleMarkers";
-import { coordinateType } from "@/services/api/types";
+import { childrenType } from "@/global/types";
 
 const canter = [51.336281, 35.699731];
 
-const locations: coordinateType[] = [
-  {
-    lon: 51.429717,
-    lat: 35.725159,
-  },
-  {
-    lon: 51.386148,
-    lat: 35.713095,
-  },
-  {
-    lon: 51.324975,
-    lat: 35.702592,
-  },
-];
 const Map = Mapir.setToken({
   transformRequest: (url: any) => {
     return {
@@ -36,19 +21,25 @@ const Map = Mapir.setToken({
   },
 });
 
-export default function MapWrapper() {
+type propsType = {
+  height: number // in px
+}
+
+const MapWrapper: React.FC<childrenType & propsType> = ({ children, height }) => {
   return (
     <Mapir
       center={canter}
       Map={Map}
       containerStyle={{
-        height: "550px",
+        height: `${height}px`,
         width: "100%",
       }}
       style={mapStyles.dark.url}
       userLocation
     >
-      {<MultipleMarkers locations={locations} />}
+      {children}
     </Mapir>
   );
-}
+};
+
+export default MapWrapper;

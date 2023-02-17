@@ -1,7 +1,7 @@
 import React from "react";
-import SidebarFixed from "@/Components/Dasboard/Layout/SidebarFixed";
-import Main from "@/Components/Dasboard/Layout/Main";
-import Header from "@/Components/Dasboard/Layout/Header";
+import SidebarFixed from "@/Components/Dashboard/Layout/SidebarFixed";
+import Main from "@/Components/Dashboard/Layout/Main";
+import Header from "@/Components/Dashboard/Layout/Header";
 
 //TODO: fix the comment
 

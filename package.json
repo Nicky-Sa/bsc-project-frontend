@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/charts": "^1.4.2",
     "@headlessui/react": "^1.7.10",
     "@next/font": "^13.1.6",
     "@reduxjs/toolkit": "^1.9.2",
@@ -23,7 +24,6 @@
     "iconsax-react": "^0.0.8",
     "mapir-react-component": "^2.0.7",
     "next": "13.1.6",
-    "next-auth": "^4.19.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.0.5",

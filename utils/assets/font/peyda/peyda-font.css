@@ -1,0 +1,56 @@
+@font-face {
+  font-family: peyda;
+  font-weight: bold;
+  font-style: normal;
+  src: url('./woff2/PeydaWeb-Bold.woff2');
+}
+
+@font-face {
+  font-family: peyda;
+  font-weight: 900;
+  font-style: normal;
+  src: url('./woff2/PeydaWeb-Black.woff2');
+}
+
+
+@font-face {
+  font-family: peyda;
+  font-weight: 600;
+  font-style: normal;
+  src: url('./woff2/PeydaWeb-SemiBold.woff2');
+}
+
+@font-face {
+  font-family: peyda;
+  font-weight: 500;
+  font-style: normal;
+  src: url('./woff2/PeydaWeb-Medium.woff2');
+}
+
+@font-face {
+  font-family: peyda;
+  font-weight: 400;
+  font-style: normal;
+  src: url('./woff2/PeydaWeb-Regular.woff2');
+}
+
+@font-face {
+  font-family: peyda;
+  font-weight: 300;
+  font-style: normal;
+  src: url('./woff2/PeydaWeb-Light.woff2');
+}
+
+@font-face {
+  font-family: peyda;
+  font-weight: 200;
+  font-style: normal;
+  src: url('./woff2/PeydaWeb-ExtraLight.woff2');
+}
+
+@font-face {
+  font-family: peyda;
+  font-weight: 100;
+  font-style: normal;
+  src: url('./woff2/PeydaWeb-Thin.woff2');
+}

@@ -5,7 +5,6 @@ import { classNames } from "@/utils/functions";
 type propsType = {
   variation: "outline" | "fill" | "text";
   disabled?: boolean;
-  className?: string;
   onClick?: () => void; //TODO: mandatory
 };
 

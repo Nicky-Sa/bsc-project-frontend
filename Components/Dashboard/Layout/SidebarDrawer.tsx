@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Drawer } from "antd";
 import { Add, HambergerMenu } from "iconsax-react";
 import "@/Components/antStyles.css";
-import Sidebar from "@/Components/Dasboard/Layout/Sidebar";
+import Sidebar from "@/Components/Dashboard/Layout/Sidebar";
 
 const SidebarDrawer: React.FC = () => {
   const [open, setOpen] = useState(false);

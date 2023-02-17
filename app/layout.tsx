@@ -6,18 +6,17 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { classNames } from "@/utils/functions";
 import { childrenType } from "@/global/types";
-import { peyda } from "@/utils/assets/font/font-const";
 import store, { storePersist } from "@/store";
 import Toast from "@/Components/Notification/Toast";
 
 const RootLayout: React.FC<childrenType> = ({ children }) => {
   return (
-    <html lang="fa" className={`${peyda.variable}`}>
+    <html lang="fa">
       <head />
       <ConfigProvider
         theme={{
           token: {
-            fontFamily: "var(--font-peyda)",
+            fontFamily: "peyda",
             colorLink: "#283040",
             colorPrimary: "#3D00A1",
             fontSize: 16,
