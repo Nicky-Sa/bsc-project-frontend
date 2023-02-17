@@ -2,8 +2,22 @@ import React from "react";
 import { childrenType } from "@/global/types";
 import { classNames } from "@/utils/functions";
 
-const DarkContainer: React.FC<childrenType> = ({ children, className }) => {
-  return <div className={classNames("p-2 rounded-2xl bg-primary-dark-5 ", className as string)}>{children}</div>;
+type propsType = {
+  size: "fit" | "free";
+};
+
+const DarkContainer: React.FC<childrenType & propsType> = ({ children, className, size }) => {
+  return (
+    <div
+      className={classNames(
+        className as string,
+        "rounded-2xl bg-primary-dark-5",
+        size === "fit" ? "p-2 " : "p-4"
+      )}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default DarkContainer;

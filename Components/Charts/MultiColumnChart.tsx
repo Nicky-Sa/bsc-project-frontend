@@ -40,6 +40,8 @@ const MultiColumnChart: React.FC<propsType> = ({data}) => {
     yField: "value",
     seriesField: "deviceNumber",
     isGroup: true,
+    columnWidthRatio: 0.35,
+    marginRatio: 0.4,
     columnStyle: {
       radius: [20, 20, 0, 0],
     },
