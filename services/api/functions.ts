@@ -1,6 +1,6 @@
-import { cookie } from "@/services/api/types";
+import { cookieType } from "@/services/api/types";
 
-export const parseCookie = (cookies: cookie[]) => {
+export const parseCookie = (cookies: cookieType[]) => {
   let cookieString = "";
   cookies?.forEach((cookie) => {
     cookieString = cookieString.concat(cookie.name, "=", cookie.value, "; ");

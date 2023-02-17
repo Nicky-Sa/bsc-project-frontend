@@ -11,7 +11,7 @@ const Sidebar: React.FC = () => {
   return (
     <div
       className={
-        "py-6 px-1 md:px-4 flex flex-col gap-12 items-center justify-between bg-primary-dark-5 overflow-y-auto min-h-full lg:rounded-2xl"
+        "py-6 px-4 flex flex-col gap-12 items-center justify-between bg-primary-dark-5 overflow-y-auto min-h-full lg:rounded-2xl"
       }
     >
       <Link href="/" className={"mt-2"}>
@@ -29,8 +29,10 @@ const Sidebar: React.FC = () => {
                 "flex flex-row justify-start items-center p-3 pb-4 rounded-md gap-4 text-neutral-1"
               )}
             >
-              {React.createElement(item.icon)}
-              <p className={"h6 -mb-2"}>{item.name}</p>
+              <>
+                {React.createElement(item.icon)}
+                <p className={"h6 -mb-2"}>{item.name}</p>
+              </>
             </Link>
           );
         })}

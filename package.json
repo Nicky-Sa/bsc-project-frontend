@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -p 3004",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3004",
+    "up": "yarn run build && yarn run start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "iconsax-react": "^0.0.8",
+    "mapir-react-component": "^2.0.7",
     "next": "13.1.6",
     "next-auth": "^4.19.2",
     "react": "18.2.0",

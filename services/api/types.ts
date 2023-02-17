@@ -3,7 +3,12 @@ export type authType = {
   password: string;
 };
 
-export type cookie = {
-  name: string,
-  value: string
-}
+export type cookieType = {
+  name: string;
+  value: string;
+};
+
+export type coordinateType = {
+  lon: number;
+  lat: number;
+};

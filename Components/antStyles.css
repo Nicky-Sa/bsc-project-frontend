@@ -1,0 +1,26 @@
+.ant-dropdown .ant-dropdown-menu {
+  background-color: #1d1d41;
+  padding: 8px;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item {
+  color: white;
+  padding: 4px 0;
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item.ant-dropdown-menu-item-active {
+  background-color: #5f39d6;
+}
+.ant-drawer .ant-drawer-body {
+  background-color: #1d1d41;
+  padding: 0;
+}
+
+.ant-drawer .ant-drawer-header {
+  background-color: #1d1d41;
+  padding: 12px;
+}
+
+.ant-popover {
+  width: 25%;
+}

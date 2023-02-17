@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import type { MenuProps } from "antd";
 import { Dropdown } from "antd";
 import { childrenType } from "@/global/types";
-import "@/Components/antReStyles.css";
+import "@/Components/antStyles.css";
 import { ArrowDown2 } from "iconsax-react";
 import { classNames } from "@/utils/functions";
 
