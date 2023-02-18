@@ -5,9 +5,10 @@ import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import dynamic from "next/dynamic";
 import Chips from "@/Components/UI/Chips";
 import { coordinateType } from "@/services/api/types";
+import { Skeleton } from "antd";
 
 const Map = dynamic(() => import("@/Components/Map/Map"), {
-  loading: () => <p>درحال بارگذاری نقشه...</p>,
+  loading: () => <Skeleton active />,
   ssr: false,
 });
 

@@ -4,9 +4,10 @@ import React from "react";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 
 import dynamic from "next/dynamic";
+import { Skeleton } from "antd";
 
 const MultiColumnChart = dynamic(() => import("@/Components/Charts/MultiColumnChart"), {
-  loading: () => <p>درحال بارگذاری نمودار...</p>,
+  loading: () => <Skeleton active />,
   ssr: false,
 });
 

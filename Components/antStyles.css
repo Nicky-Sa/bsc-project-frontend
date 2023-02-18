@@ -60,3 +60,14 @@
 .ant-table-wrapper .ant-table-container table>thead>tr:first-child >*:first-child, .ant-table-wrapper .ant-table-container table>thead>tr:first-child >*:last-child{
   border-radius: 0 !important;
 }
+
+.ant-collapse-header-text, .ant-collapse-content-box{
+  color: #E5E5E5 !important;
+}
+
+.ant-collapse-borderless >.ant-collapse-item{
+  border-bottom: none !important;
+  /*margin-bottom: 12px;*/
+  background-color: #272752 !important;
+  border-radius: 8px !important;
+}
