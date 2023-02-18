@@ -8,6 +8,7 @@ import { Marker } from "@antv/g2/lib/interface";
 type propsType<T> = {
   data: T[];
   fields: [string, string, string];
+  colors: string[];
 };
 
 const textStyle = {
@@ -17,7 +18,7 @@ const textStyle = {
   fontFamily: "peyda",
 };
 
-const MultiColumnChart = <T extends object>({ data, fields }: propsType<T>) => {
+const MultiColumnChart = <T extends object>({ data, fields, colors }: propsType<T>) => {
   const config = {
     data,
     scrollbar: {
@@ -30,7 +31,7 @@ const MultiColumnChart = <T extends object>({ data, fields }: propsType<T>) => {
       },
       categorySize: 100,
     },
-    autoFit: true,
+    height: 300,
     xField: fields[0],
     yField: fields[1],
     seriesField: fields[2],
@@ -41,7 +42,7 @@ const MultiColumnChart = <T extends object>({ data, fields }: propsType<T>) => {
       radius: [20, 20, 0, 0],
     },
     colorField: "tagNumber", // or seriesField in some cases
-    color: ["#6359E9", "#64CFF6", "#7E55D6", "#B199E6"],
+    color: colors,
     xAxis: {
       label: {
         offset: 20,

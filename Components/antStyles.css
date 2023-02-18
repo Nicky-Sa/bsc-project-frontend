@@ -25,6 +25,13 @@
   width: 25%;
 }
 
+@media (max-width: 1024px) {
+  .ant-popover {
+    width: 55%;
+  }
+}
+
+
 .g2-tooltip-title, .g2-tooltip-list{
   font-family: peyda, serif ;
   direction: ltr;

@@ -1,4 +1,4 @@
-export const devicesBattery = [
+export const tagzBatteries = [
   {
     month: "فروردین",
     tagNumber: "1",

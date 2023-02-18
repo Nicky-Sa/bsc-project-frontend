@@ -2,7 +2,12 @@ import React from "react";
 // @ts-ignore
 import Mapir from "mapir-react-component";
 import { coordinateType } from "@/services/api/types";
-import Marker from "@/Components/Map/Marker/Marker";
+import dynamic from "next/dynamic";
+
+const Marker = dynamic(() => import("@/Components/Map/Marker/Marker"), {
+  loading: () => <p>...</p>,
+  ssr: false,
+});
 
 type propsType = {
   locations: coordinateType[];

@@ -24,3 +24,15 @@ export const getUser = async (cookieStore: RequestCookies | ReadonlyRequestCooki
     console.log(error?.response?.data);
   }
 };
+
+export const nestedSearch: any = (array: any[], nestKey: string, searchKey: string, searchValue: string) => {
+  for (const item of array) {
+    if (item[searchKey].toString() === searchValue) {
+      return item;
+    }
+    if (item[nestKey]) {
+      return nestedSearch(item[nestKey], nestKey, searchKey, searchValue);
+    }
+  }
+  return -1;
+};

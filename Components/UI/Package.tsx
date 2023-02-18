@@ -26,7 +26,7 @@ const Package: React.FC<propsType> = ({ level }) => {
   }
   return (
     <Chips className={"bg-neutral-2/30"}>
-      <IconText size={"b2"}>
+      <IconText size={"b2"} className={"items-center"}>
         <Crown1 size={"20"} className={iconClassName} />
         <p>پکیچ {packageName}</p>
       </IconText>

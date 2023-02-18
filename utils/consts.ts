@@ -9,6 +9,6 @@ export const dashboardNavigation = [
   { name: "خانه", href: "/dashboard", icon: Home2 },
   { name: "تاریخچه‌ی موقعیت‌ها", href: "/dashboard/history", icon: Map1 },
   { name: "امور مالی", href: "/dashboard/finance", icon: Moneys },
-  { name: "پیام‌های تگ‌ها", href: "/dashboard/devicesMessages", icon: DeviceMessage },
+  { name: "پیام‌های تگ‌ها", href: "/dashboard/tagzMessages", icon: DeviceMessage },
   { name: "سوالات متداول", href: "/dashboard/faq", icon: MessageQuestion },
 ];

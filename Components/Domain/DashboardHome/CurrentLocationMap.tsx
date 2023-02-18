@@ -1,16 +1,20 @@
 "use client";
 import React from "react";
 import MultipleMarkers from "@/Components/Map/Marker/MultipleMarkers";
-import { tagzCurrentLocation } from "@/mock/tagzCurrentLocation";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import dynamic from "next/dynamic";
 import Chips from "@/Components/UI/Chips";
+import { coordinateType } from "@/services/api/types";
 
 const Map = dynamic(() => import("@/Components/Map/Map"), {
   loading: () => <p>درحال بارگذاری نقشه...</p>,
   ssr: false,
 });
-const CurrentLocationMap: React.FC = () => {
+
+type propsType = {
+  data: coordinateType[]
+}
+const CurrentLocationMap: React.FC<propsType> = ({data}) => {
   return (
     <DarkContainer size={"fit"} className={"relative"}>
       <div className={"absolute z-20 top-[16px] right-[52px]"}>
@@ -18,7 +22,7 @@ const CurrentLocationMap: React.FC = () => {
           <p className={"b1"}>موقعیت زنده تگ‌ها</p>
         </Chips>
       </div>
-      <Map height={500}>{<MultipleMarkers locations={tagzCurrentLocation} />}</Map>
+      <Map height={450}>{<MultipleMarkers locations={data} />}</Map>
     </DarkContainer>
   );
 };
