@@ -1,19 +1,18 @@
-"use client";
 import React from "react";
-import Table from "@/Components/Domain/Messages/Table";
+import MessagesTable from "@/Components/Domain/Messages/MessagesTable";
 import "@/Components/antStyles.css";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import Button from "@/Components/UI/Button";
 import IconText from "@/Components/UI/IconText";
 import { ArrowLeft2 } from "iconsax-react";
-import { MessagesType } from "@/global/types";
 import Link from "next/link";
+import { MessagesType } from "@/Components/Domain/Messages/types";
 
 type propsType = {
   data: MessagesType[];
 };
 
-const MessagesTable: React.FC<propsType> = ({ data }) => {
+const MessagesTableContainer: React.FC<propsType> = ({ data }) => {
   return (
     <DarkContainer className={"basis-1/2 flex flex-col gap-4"} size={"free"}>
       <div className={"flex flex-row items-center justify-between"}>
@@ -25,9 +24,9 @@ const MessagesTable: React.FC<propsType> = ({ data }) => {
           </IconText>
         </Button>
       </div>
-      <Table data={data} />
+      <MessagesTable data={data} />
     </DarkContainer>
   );
 };
 
-export default MessagesTable;
+export default MessagesTableContainer;

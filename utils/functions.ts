@@ -36,3 +36,8 @@ export const nestedSearch: any = (array: any[], nestKey: string, searchKey: stri
   }
   return -1;
 };
+
+
+export const reformat = (number: number | string, postfix = "") => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (postfix ? (" " + postfix) : "");
+};

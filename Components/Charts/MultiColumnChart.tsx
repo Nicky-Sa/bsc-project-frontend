@@ -4,26 +4,15 @@ import "@/Components/antStyles.css";
 import { ListItem } from "@antv/component";
 import { Datum } from "@antv/g2plot";
 import { Marker } from "@antv/g2/lib/interface";
+import { reformat } from "@/utils/functions";
+import { chartPropsType } from "@/Components/Charts/types";
+import { textStyle } from "@/Components/Charts/consts";
 
-type propsType<T> = {
-  data: T[];
-  fields: [string, string, string];
-  colors: string[];
-};
-
-const textStyle = {
-  fill: "white",
-  opacity: 0.7,
-  fontSize: 14,
-  fontFamily: "peyda",
-};
-
-const MultiColumnChart = <T extends object>({ data, fields, colors }: propsType<T>) => {
+const MultiColumnChart = <T extends object>({ data, fields, color, unit }: chartPropsType<T>) => {
   const config = {
     data,
     scrollbar: {
       type: "horizontal" as "horizontal",
-      padding: [30, 0, 0, 0] as [number, number, number, number],
       style: {
         thumbHighlightColor: "#5835ac",
         thumbColor: "#6c3fd2",
@@ -42,7 +31,7 @@ const MultiColumnChart = <T extends object>({ data, fields, colors }: propsType<
       radius: [20, 20, 0, 0],
     },
     colorField: "tagNumber", // or seriesField in some cases
-    color: colors,
+    color: color,
     xAxis: {
       label: {
         offset: 20,
@@ -53,9 +42,10 @@ const MultiColumnChart = <T extends object>({ data, fields, colors }: propsType<
     yAxis: {
       label: {
         autoRotate: false,
+        offset: 80,
         style: textStyle,
         formatter: (text: string, item: ListItem, index: number) => {
-          return `${text}%`;
+          return `${reformat(text, unit)}`;
         },
       },
       grid: {
@@ -100,7 +90,7 @@ const MultiColumnChart = <T extends object>({ data, fields, colors }: propsType<
     },
     tooltip: {
       formatter: (datum: Datum) => {
-        return { name: `#${datum.tagNumber}`, value: `${datum.value}%` };
+        return { name: `#${datum.tagNumber}`, value: `${reformat(datum.value, unit)}` };
       },
     },
   };

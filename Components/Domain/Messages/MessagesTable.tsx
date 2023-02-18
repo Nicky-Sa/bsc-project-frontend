@@ -3,7 +3,7 @@ import React from "react";
 import { Popover, Table as AntTable } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import "@/Components/antStyles.css";
-import { MessagesType } from "@/global/types";
+import { MessagesType } from "@/Components/Domain/Messages/types";
 
 const columns: ColumnsType<MessagesType> = [
   {
@@ -46,10 +46,10 @@ type propsType = {
 };
 
 
-const Table: React.FC<propsType> = ({data}) => {
+const MessagesTable: React.FC<propsType> = ({data}) => {
   return (
       <AntTable columns={columns} dataSource={data} pagination={false} scroll={{ x: "max-content" }} />
   );
 };
 
-export default Table;
+export default MessagesTable;
