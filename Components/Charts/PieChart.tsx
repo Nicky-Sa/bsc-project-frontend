@@ -14,7 +14,6 @@ const PieChart = <T extends object>({ data, fields, color, unit }: chartPropsTyp
       lineWidth: 0,
     },
     height: 350,
-    // appendPadding: 10,
     angleField: fields[0],
     colorField: fields[1],
     color: color,

@@ -8,7 +8,7 @@ import { reformat } from "@/utils/functions";
 import { chartPropsType } from "@/Components/Charts/types";
 import { textStyle } from "@/Components/Charts/consts";
 
-const MultiColumnChart = <T extends object>({ data, fields, color, unit }: chartPropsType<T>) => {
+const MultiColumnChart = <T extends object>({ data, fields, color, unit, height }: chartPropsType<T>) => {
   const config = {
     data,
     scrollbar: {
@@ -20,7 +20,7 @@ const MultiColumnChart = <T extends object>({ data, fields, color, unit }: chart
       },
       categorySize: 100,
     },
-    height: 300,
+    height: height ?? 300,
     xField: fields[0],
     yField: fields[1],
     seriesField: fields[2],

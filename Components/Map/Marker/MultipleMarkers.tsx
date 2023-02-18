@@ -1,10 +1,10 @@
 import React from "react";
 // @ts-ignore
 import Mapir from "mapir-react-component";
-import { coordinateType } from "@/services/api/types";
 import dynamic from "next/dynamic";
+import { coordinateType } from "@/global/types";
 
-const Marker = dynamic(() => import("@/Components/Map/Marker/Marker"), {
+const MarkerPopover = dynamic(() => import("@/Components/Map/Marker/MarkerPopover"), {
   loading: () => <p>...</p>,
   ssr: false,
 });
@@ -18,7 +18,7 @@ const MultipleMarkers: React.FC<propsType> = ({ locations }) => {
   return (
     <>
       {locations.map((location, i) => (
-        <Marker key={i} lon={location.lon} lat={location.lat} />
+        <MarkerPopover key={i} lon={location.lon} lat={location.lat} />
       ))}
     </>
   );

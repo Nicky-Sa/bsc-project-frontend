@@ -5,9 +5,9 @@ import type { ColumnsType } from "antd/es/table";
 import "@/Components/antStyles.css";
 
 import { CheckCircleOutlined, CloseCircleOutlined, SyncOutlined } from "@ant-design/icons";
-import { TransactionsType } from "@/Components/Domain/Finance/types";
+import { transactionsType } from "@/Components/Domain/Finance/types";
 
-const columns: ColumnsType<TransactionsType> = [
+const columns: ColumnsType<transactionsType> = [
   {
     title: "دلیل",
     dataIndex: "reason",
@@ -53,7 +53,7 @@ const columns: ColumnsType<TransactionsType> = [
 ];
 
 type propsType = {
-  data: TransactionsType[];
+  data: transactionsType[];
 };
 
 const TransactionsTable: React.FC<propsType> = ({ data }) => {

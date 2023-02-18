@@ -6,10 +6,10 @@ import Button from "@/Components/UI/Button";
 import IconText from "@/Components/UI/IconText";
 import { ArrowLeft2 } from "iconsax-react";
 import Link from "next/link";
-import { MessagesType } from "@/Components/Domain/Messages/types";
+import { messagesType } from "@/Components/Domain/Messages/types";
 
 type propsType = {
-  data: MessagesType[];
+  data: messagesType[];
 };
 
 const MessagesTableContainer: React.FC<propsType> = ({ data }) => {

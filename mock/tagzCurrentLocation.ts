@@ -1,4 +1,4 @@
-import { coordinateType } from "@/services/api/types";
+import { coordinateType } from "@/global/types";
 
 export const tagzCurrentLocation: coordinateType[] = [
   {

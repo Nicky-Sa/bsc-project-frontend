@@ -4,9 +4,9 @@ import React from "react";
 import Mapir from "mapir-react-component";
 import "mapir-react-component/dist/index.css";
 import { mapStyles } from "@/Components/Map/mapStyles";
-import { childrenType } from "@/global/types";
+import { childrenType, coordinateType } from "@/global/types";
 
-const canter = [51.336281, 35.699731];
+const defaultCanter = [51.336281, 35.699731];
 
 const Map = Mapir.setToken({
   transformRequest: (url: any) => {
@@ -22,13 +22,15 @@ const Map = Mapir.setToken({
 });
 
 type propsType = {
-  height: number // in px
-}
+  height: number; // in px
+  center?: coordinateType;
+  zoom: number
+};
 
-const MapWrapper: React.FC<childrenType & propsType> = ({ children, height }) => {
+const MapWrapper: React.FC<childrenType & propsType> = ({ children, height, center, zoom }) => {
   return (
     <Mapir
-      center={canter}
+      center={center ? [center.lon, center.lat] : defaultCanter}
       Map={Map}
       containerStyle={{
         height: `${height}px`,
@@ -36,6 +38,7 @@ const MapWrapper: React.FC<childrenType & propsType> = ({ children, height }) =>
       }}
       style={mapStyles.dark.url}
       userLocation
+      zoom={[zoom]}
     >
       {children}
     </Mapir>

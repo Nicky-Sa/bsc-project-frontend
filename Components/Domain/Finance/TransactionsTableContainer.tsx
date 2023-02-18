@@ -1,10 +1,10 @@
 import React from "react";
 import TransactionsTable from "@/Components/Domain/Finance/TrasnactionsTable";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
-import { TransactionsType } from "@/Components/Domain/Finance/types";
+import { transactionsType } from "@/Components/Domain/Finance/types";
 
 type propsType = {
-  data: TransactionsType[];
+  data: transactionsType[];
 };
 
 const TransactionsTableContainer: React.FC<propsType> = ({data}) => {

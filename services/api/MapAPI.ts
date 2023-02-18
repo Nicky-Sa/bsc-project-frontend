@@ -1,5 +1,5 @@
 import axios from "axios";
-import { coordinateType } from "@/services/api/types";
+import { coordinateType } from "@/global/types";
 
 export default class MapAPI {
   static init() {

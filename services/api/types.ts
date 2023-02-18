@@ -8,7 +8,3 @@ export type cookieType = {
   value: string;
 };
 
-export type coordinateType = {
-  lon: number;
-  lat: number;
-};

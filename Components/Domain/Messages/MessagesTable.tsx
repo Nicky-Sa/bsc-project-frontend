@@ -3,9 +3,9 @@ import React from "react";
 import { Popover, Table as AntTable } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import "@/Components/antStyles.css";
-import { MessagesType } from "@/Components/Domain/Messages/types";
+import { messagesType } from "@/Components/Domain/Messages/types";
 
-const columns: ColumnsType<MessagesType> = [
+const columns: ColumnsType<messagesType> = [
   {
     title: "آیدی",
     dataIndex: "id",
@@ -42,7 +42,7 @@ const columns: ColumnsType<MessagesType> = [
 ];
 
 type propsType = {
-  data: MessagesType[]
+  data: messagesType[]
 };
 
 

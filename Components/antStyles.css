@@ -23,6 +23,7 @@
 
 .ant-popover {
   width: 25%;
+  max-width: fit-content;
 }
 
 @media (max-width: 1024px) {

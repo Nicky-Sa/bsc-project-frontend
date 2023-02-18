@@ -1,4 +1,4 @@
-export type TransactionsType = {
+export type transactionsType = {
   key: string;
   reason: string;
   amount: number;

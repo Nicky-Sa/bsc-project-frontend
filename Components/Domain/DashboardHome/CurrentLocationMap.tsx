@@ -4,8 +4,8 @@ import MultipleMarkers from "@/Components/Map/Marker/MultipleMarkers";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import dynamic from "next/dynamic";
 import Chips from "@/Components/UI/Chips";
-import { coordinateType } from "@/services/api/types";
 import { Skeleton } from "antd";
+import { coordinateType } from "@/global/types";
 
 const Map = dynamic(() => import("@/Components/Map/Map"), {
   loading: () => <Skeleton active />,
@@ -23,7 +23,7 @@ const CurrentLocationMap: React.FC<propsType> = ({data}) => {
           <p className={"b1"}>موقعیت زنده تگ‌ها</p>
         </Chips>
       </div>
-      <Map height={450}>{<MultipleMarkers locations={data} />}</Map>
+      <Map height={450} zoom={11}>{<MultipleMarkers locations={data} />}</Map>
     </DarkContainer>
   );
 };
