@@ -6,6 +6,7 @@ import SidebarDrawer from "@/Components/Dashboard/Layout/SidebarDrawer";
 import { usePathname } from "next/navigation";
 import { nestedSearch } from "@/utils/functions";
 import { dashboardNavigation } from "@/utils/consts";
+import Link from "next/link";
 
 const Header: React.FC = () => {
   const pathname = usePathname();
@@ -19,7 +20,10 @@ const Header: React.FC = () => {
       <h4 className={"h4 hidden lg:block"}>{pageTitle}</h4>
       <SidebarDrawer />
       <div className={"flex flex-row items-end gap-8"}>
-        <Package level={"gold"} />
+        <Link href={"/dashboard/packages"}>
+          {/*TODO: Make package level real!*/}
+          <Package level={"gold"} />
+        </Link>
         <UserProfile />
       </div>
     </header>

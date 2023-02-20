@@ -2,24 +2,29 @@ import React from "react";
 import { Logout, ProfileCircle, User } from "iconsax-react";
 import DropDown from "@/Components/UI/DropDown";
 import IconText from "@/Components/UI/IconText";
+import Link from "next/link";
 
 const dropdownItems = [
   {
     key: "1",
     label: (
-      <IconText className={"min-w-[10rem] items-center text-neutral-1"}>
-        <ProfileCircle size="20" />
-        <p>پروفایل</p>
-      </IconText>
+      <Link href={"/dashboard/profile"}>
+        <IconText className={"min-w-[10rem] items-center text-neutral-1"}>
+          <ProfileCircle size="20" />
+          <p>پروفایل</p>
+        </IconText>
+      </Link>
     ),
   },
   {
     key: "2",
     label: (
-      <IconText className={"text-red-light-6 items-center"}>
-        <Logout size="20" />
-        <p>خروج</p>
-      </IconText>
+      <Link href={"/logout"}>
+        <IconText className={"text-red-light-6 items-center"}>
+          <Logout size="20" />
+          <p>خروج</p>
+        </IconText>
+      </Link>
     ),
   },
 ];
