@@ -6,8 +6,8 @@ const initialState: userState = {
     createdAt: "",
     updatedAt: "",
     username: "",
-    phoneNumber: null,
-    fullName: null,
+    phoneNumber: "",
+    fullName: "",
     role: "",
   },
 };

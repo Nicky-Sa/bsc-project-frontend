@@ -1,10 +1,11 @@
+// Don't use it directly in Form
 import React, { useState } from "react";
 import { classNames } from "@/utils/functions";
 import { inputType } from "@/Components/Form/types";
 import { Danger } from "iconsax-react";
 
 type propsType = {
-  type: "email" | "text" | "password" | "search";
+  type: "email" | "text" | "password" | "phone";
   disabled?: boolean;
 };
 
@@ -19,18 +20,17 @@ const Input: React.FC<propsType & inputType> = ({
   disabled = false,
 }) => {
   const [showError, setShowError] = useState(false);
-
   return (
     <>
       {error && showError && type !== "password" && (
-        <Danger size="28" className={"absolute left-2 top-[48px] text-red-light-5 animate-fadeIn"} />
+        <Danger size="28" className={"absolute left-2 top-[46px] text-red-light-5 animate-fadeIn"} />
       )}
 
       <p className="b1 text-neutral-1 mb-1">{title}</p>
 
       <input
         autoComplete={"on"}
-        autoFocus = {name === "username"}
+        autoFocus={name === "username"}
         onBlur={() => setShowError(true)}
         disabled={disabled}
         type={type}
@@ -39,7 +39,7 @@ const Input: React.FC<propsType & inputType> = ({
         placeholder={placeholder}
         className={classNames(
           disabled ? "cursor-not-allowed" : "",
-          "b1 bg-transparent text-neutral-2 w-full rounded-md b1 p-2 border-2 focus:ring-0 focus:outline-0",
+          "b1 bg-transparent text-neutral-2 w-full rounded-md b1 p-1.5 border-2 focus:ring-0 focus:outline-0",
           error && showError
             ? "border-red-light-5"
             : " border-primary-dark-4 hover:border-primary-light-3 focus:border-primary-light-3 transition-all duration-200"

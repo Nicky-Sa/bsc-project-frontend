@@ -16,7 +16,7 @@ const Email: React.FC<propsType & inputType> = ({
   disabled = false,
 }) => {
   return (
-    <div className={"relative"}>
+    <div className={"relative w-full"}>
       <Input
         title={title}
         type={"email"}

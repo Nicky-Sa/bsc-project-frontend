@@ -9,11 +9,11 @@ const Password: React.FC<inputType> = ({ title, name, placeholder, state, onChan
 
   const eyesClassName = classNames(
     !state ? "text-transparent" : "text-neutral-2",
-    "transition-all duration-500 absolute left-2 top-[48px] cursor-pointer animate-fadeIn"
+    "transition-all duration-500 absolute left-2 top-[46px] cursor-pointer animate-fadeIn"
   );
 
   return (
-    <div className={"relative"}>
+    <div className={"relative w-full"}>
       {!showPassword ? (
         <Eye
           size="28"
@@ -31,7 +31,6 @@ const Password: React.FC<inputType> = ({ title, name, placeholder, state, onChan
           }}
         />
       )}
-
       <Input
         title={title}
         type={showPassword ? "text" : "password"}

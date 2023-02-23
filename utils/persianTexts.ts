@@ -9,6 +9,9 @@ export enum PersianErrors {
   duplicateEmail = "ایمیل قبلا در سامانه ثبت شده است.",
   checkFormats = "لطفا فرمت ورودی‌ها را مجددا بررسی کنید.",
   networkError = "مشکل از سمت سرور است. اندکی صبر کنید یا به پشتیبانی اطلاع دهید.",
+  phoneOnlyDigits = "شماره همراه تنها شامل عدد است.",
+  phoneStartsWith09 = "شماره همراه با ۰۹ شروع می‌شود.",
+  phone11Digits = "شماره همراه ۱۱ رقمی است.",
 }
 
 export enum PersianConstants {

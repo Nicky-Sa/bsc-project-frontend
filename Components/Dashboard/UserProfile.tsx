@@ -3,6 +3,8 @@ import { Logout, ProfileCircle, User } from "iconsax-react";
 import DropDown from "@/Components/UI/DropDown";
 import IconText from "@/Components/UI/IconText";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+import { storeType } from "@/store";
 
 const dropdownItems = [
   {
@@ -30,13 +32,15 @@ const dropdownItems = [
 ];
 
 const UserProfile: React.FC = () => {
+  const userInfo = useSelector((state: storeType) => state.currentUserReducer.userInfo)
+
   return (
     <div className={"flex flex-row gap-2 b1"}>
       <div className={" -mb-[3px]"}>
         <DropDown items={dropdownItems}>
           <IconText className={"items-start b1"}>
             <User size="26" />
-            <p>نیک وین</p>
+            <p>{userInfo.fullName || "کاربر عادی"}</p>
           </IconText>
         </DropDown>
       </div>

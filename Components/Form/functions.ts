@@ -38,13 +38,29 @@ export const checkPasswordMatch = (password: string, confirmPassword: string) =>
   }
 };
 
-export const canSubmit = (inputs: any, errors: any) => {
+export const checkPhoneNumber = (phoneNumber: string) => {
+  if (phoneNumber) {
+    if (!/^\d+$/.test(phoneNumber)) {
+      return PersianErrors.phoneOnlyDigits;
+    }
+    if (!phoneNumber.startsWith("09")) {
+      return PersianErrors.phoneStartsWith09;
+    }
+    if (phoneNumber.length !== 11) {
+      return PersianErrors.phone11Digits;
+    }
+  }
+  return "";
+};
+
+export const canSubmit = (inputs: any, errors?: any) => {
   let result = true;
   for (const key in inputs) {
     result = result && !!inputs[key];
   }
-  for (const key in errors) {
-    result = result && !errors[key];
-  }
+  if (errors)
+    for (const key in errors) {
+      result = result && !errors[key];
+    }
   return !result;
 };
