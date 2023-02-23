@@ -11,7 +11,7 @@ type propsType = {
 const HistoryTableContainer: React.FC<propsType> = ({data}) => {
   return (
     <DarkContainer className={"w-full flex flex-col gap-4"} size={"free"}>
-      <h6 className={"h6"}>موقعیت‌های قبلی</h6>
+      <h6>موقعیت‌های قبلی</h6>
       <HistoryTable data={data}/>
     </DarkContainer>
   );

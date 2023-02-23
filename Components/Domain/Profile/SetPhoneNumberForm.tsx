@@ -31,7 +31,7 @@ const SetPhoneNumberForm: React.FC<defaultFormType> = ({ defaultValue }) => {
 
   return (
     <DarkContainer className={"w-full flex flex-col gap-6"} size={"free"}>
-      <p className={"h6"}>تغییر شماره موبایل</p>
+      <h6>تغییر شماره موبایل</h6>
       <Form buttonName={"تایید"} onSubmit={onSubmit} buttonDisabled={canSubmit(inputs, errors)} buttonShape={"fit"}>
         <Phone
           name={"phoneNumber"}

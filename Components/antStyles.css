@@ -68,7 +68,17 @@
 
 .ant-collapse-borderless >.ant-collapse-item{
   border-bottom: none !important;
-  /*margin-bottom: 12px;*/
   background-color: #272752 !important;
   border-radius: 8px !important;
+}
+
+.ant-modal .ant-modal-close{
+  top: 12px;
+}
+
+.ant-modal .ant-modal-close:hover{
+  background-color: transparent;
+}
+.ant-modal-root .ant-modal-mask{
+  backdrop-filter: blur(8px);
 }

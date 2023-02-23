@@ -1,5 +1,5 @@
 import React from "react";
-import { Logout, ProfileCircle, User } from "iconsax-react";
+import { Logout, Setting2, User } from "iconsax-react";
 import DropDown from "@/Components/UI/DropDown";
 import IconText from "@/Components/UI/IconText";
 import Link from "next/link";
@@ -12,8 +12,8 @@ const dropdownItems = [
     label: (
       <Link href={"/dashboard/profile"}>
         <IconText className={"min-w-[10rem] items-center text-neutral-1"}>
-          <ProfileCircle size="20" />
-          <p>پروفایل</p>
+          <Setting2 size="20" />
+          <p>تنظیمات</p>
         </IconText>
       </Link>
     ),

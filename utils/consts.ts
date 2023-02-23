@@ -12,4 +12,5 @@ export const navigation = [
   { name: "پیام‌های تگ‌ها", href: "/dashboard/tagzMessages", icon: DeviceMessage, sidebar: true },
   { name: "سوالات متداول", href: "/dashboard/faq", icon: MessageQuestion, sidebar: true },
   { name: "پروفایل کاربری", href: "/dashboard/profile", icon: null, sidebar: false },
+  { name: "پکیج‌ها", href: "/dashboard/packages", icon: null, sidebar: false },
 ];

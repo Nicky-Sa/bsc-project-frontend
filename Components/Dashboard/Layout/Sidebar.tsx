@@ -32,7 +32,7 @@ const Sidebar: React.FC = () => {
               >
                 <>
                   {React.createElement(item.icon as FunctionComponent)}
-                  <p className={"h6 -mb-2"}>{item.name}</p>
+                  <h6 className={"-mb-2"}>{item.name}</h6>
                 </>
               </Link>
             );

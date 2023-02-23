@@ -20,7 +20,7 @@ const SetFullNameForm: React.FC<defaultFormType> = ({ defaultValue }) => {
 
   return (
     <DarkContainer className={"w-full flex flex-col gap-6"} size={"free"}>
-      <p className={"h6"}>تغییر نام</p>
+      <h6>تغییر نام</h6>
       <Form buttonName={"تایید"} onSubmit={onSubmit} buttonDisabled={canSubmit(inputs)} buttonShape={"fit"}>
         <Text name={"fullName"} title={"نام و نام خانوادگی"} onChange={onChange} state={inputs.fullName} />
       </Form>

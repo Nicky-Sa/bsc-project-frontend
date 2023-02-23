@@ -6,6 +6,7 @@ import "@/Components/antStyles.css";
 
 import { CheckCircleOutlined, CloseCircleOutlined, SyncOutlined } from "@ant-design/icons";
 import { transactionsType } from "@/Components/Domain/Finance/types";
+import { reformat } from "@/utils/functions";
 
 const columns: ColumnsType<transactionsType> = [
   {
@@ -17,6 +18,7 @@ const columns: ColumnsType<transactionsType> = [
     title: "مبلغ",
     dataIndex: "amount",
     key: "amount",
+    render: (amount) => <p className={"b1"}>{reformat(amount, "تومان")}</p>,
   },
   {
     title: "وضعیت",

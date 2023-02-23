@@ -16,7 +16,7 @@ const MultiColumnChart = dynamic(() => import("@/Components/Charts/MultiColumnCh
 const TagzBalanceUsage: React.FC<multiColumnChartType> = ({data}) => {
     return (
       <DarkContainer className={"basis-1/2 flex flex-col gap-4 justify-between"} size={"free"}>
-        <h6 className={"h6"}>نمودار هزینه تگ‌ها</h6>
+        <h6>نمودار هزینه تگ‌ها</h6>
 
         <MultiColumnChart
             data={data}

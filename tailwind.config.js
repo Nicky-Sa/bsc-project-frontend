@@ -1,5 +1,12 @@
 /** @type {import("tailwindcss").Config} */
 module.exports = {
+  safelist: [
+    {
+      pattern:
+        /(text)-(badge)-*/,
+    },
+  ],
+
   content: ["./app/**/*.{js,ts,jsx,tsx}", "./Components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {

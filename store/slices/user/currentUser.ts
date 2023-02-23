@@ -10,6 +10,10 @@ const initialState: userState = {
     fullName: "",
     role: "",
   },
+  packageInfo: {
+    level: "gold",
+    daysLeft: 12,
+  },
 };
 
 const slice = createSlice({

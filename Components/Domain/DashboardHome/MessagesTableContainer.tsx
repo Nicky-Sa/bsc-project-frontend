@@ -16,7 +16,7 @@ const MessagesTableContainer: React.FC<propsType> = ({ data }) => {
   return (
     <DarkContainer className={"basis-1/2 flex flex-col gap-4"} size={"free"}>
       <div className={"flex flex-row items-center justify-between"}>
-        <h6 className={"h6"}>پیام‌های دریافتی از تگ‌ها</h6>
+        <h6>پیام‌های دریافتی از تگ‌ها</h6>
         <Button variation={"text"}>
           <IconText className={"items-center"}>
             <Link href={"/dashboard/tagzMessages"} className={"b1"}>نمایش همه</Link>

@@ -3,9 +3,9 @@ import { childrenType } from "@/global/types";
 import { classNames } from "@/utils/functions";
 
 type propsType = {
-  variation: "outline" | "fill" | "text";
+  variation: "outline" | "fill" | "text" | "success";
   disabled?: boolean;
-  onClick?: () => void; //TODO: mandatory
+  onClick?: () => void;
 };
 
 const Button: React.FC<propsType & childrenType> = ({
@@ -18,13 +18,17 @@ const Button: React.FC<propsType & childrenType> = ({
   let className = "";
   switch (variation) {
     case "fill":
-      className = "w-full p-2 bg-gradient-to-r from-primary-dark-3 to-primary-dark-1 hover:opacity-80";
+      className = "text-neutral-1 w-full bg-gradient-to-r from-primary-dark-3 to-primary-dark-1 hover:opacity-80";
       break;
     case "outline":
-      className = "w-full p-2 border-2 border-primary-light-3 hover:border-primary-dark-2";
+      className =
+        "text-neutral-1 w-full text-primary-light-3 border-2 border-primary-light-3 hover:border-primary-dark-2 hover:text-primary-dark-2";
       break;
     case "text":
-      className = "p-1 hover:bg-primary-dark-8 w-fit";
+      className = "p-2 w-fit";
+      break;
+    case "success":
+      className = "text-neutral-1 w-full bg-gradient-to-r from-green-dark-3 to-green-dark-1";
       break;
   }
   return (
@@ -33,10 +37,10 @@ const Button: React.FC<propsType & childrenType> = ({
         onClick={onClick}
         disabled={disabled}
         className={classNames(
-          disabled ? "grayscale cursor-not-allowed" : "transition duration-500",
-          "rounded-md text-neutral-1",
+          disabled ? "grayscale cursor-not-allowed hover:opacity-100" : "transition duration-500",
+          "rounded-md p-2 ",
           className,
-          extraClass as string,
+          extraClass as string
         )}
       >
         {children}
