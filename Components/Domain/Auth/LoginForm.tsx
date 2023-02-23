@@ -13,14 +13,16 @@ const LoginForm: React.FC = () => {
     username: "",
     password: "",
   });
+
   const [errors, setErrors] = useState({
     username: "",
   });
+
   useEffect(() => {
-    setErrors({
-      ...errors,
+    setErrors((prevErrors) => ({
+      ...prevErrors,
       username: checkEmail(inputs.username),
-    });
+    }));
   }, [inputs]);
 
   const router = useRouter();

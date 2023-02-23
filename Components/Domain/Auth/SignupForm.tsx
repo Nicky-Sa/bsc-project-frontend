@@ -14,18 +14,20 @@ const SignUpForm: React.FC = () => {
     password: "",
     confirmPassword: "",
   });
+
   const [errors, setErrors] = useState({
     username: "",
     password: "",
     confirmPassword: "",
   });
+
   useEffect(() => {
-    setErrors({
-      ...errors,
+    setErrors((prevErrors) => ({
+      ...prevErrors,
       username: checkEmail(inputs.username),
       password: checkPassword(inputs.password),
       confirmPassword: checkPasswordMatch(inputs.password, inputs.confirmPassword),
-    });
+    }));
   }, [inputs]);
 
   const router = useRouter();

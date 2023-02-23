@@ -19,8 +19,8 @@ const SetPhoneNumberForm: React.FC<defaultFormType> = ({ defaultValue }) => {
   });
 
   useEffect(() => {
-    setErrors((prevInputs) => ({
-      ...prevInputs,
+    setErrors((prevErrors) => ({
+      ...prevErrors,
       phoneNumber: checkPhoneNumber(inputs.phoneNumber),
     }));
   }, [inputs]);

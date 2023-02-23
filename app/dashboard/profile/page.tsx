@@ -8,7 +8,7 @@ import { storeType } from "@/store";
 const ProfilePage: React.FC = () => {
   const userInfo = useSelector((state: storeType) => state.currentUserReducer.userInfo);
   return (
-    <div className={"flex flex-row gap-8"}>
+    <div className={"flex flex-col md:flex-row w-full sm:w-[80%] md:w-full m-auto gap-8"}>
       <SetFullNameForm defaultValue={userInfo.fullName} />
       <SetPhoneNumberForm defaultValue={userInfo.phoneNumber} />
     </div>

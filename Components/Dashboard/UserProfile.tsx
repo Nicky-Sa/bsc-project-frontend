@@ -36,7 +36,7 @@ const UserProfile: React.FC = () => {
 
   return (
     <div className={"flex flex-row gap-2 b1"}>
-      <div className={" -mb-[3px]"}>
+      <div className={"-mb-[3px]"}>
         <DropDown items={dropdownItems}>
           <IconText className={"items-start b1"}>
             <User size="26" />
