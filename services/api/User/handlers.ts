@@ -4,6 +4,8 @@ import UserAPI from "@/services/api/User/UserAPI";
 import { updateUserType } from "@/services/api/User/types";
 import { errorNotify, successNotify } from "@/Components/Notification/Toast";
 import { translateErrors } from "@/utils/functions";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
+import { toastRedirectTimeout } from "@/utils/consts";
 
 export const getUser = async (cookieStore: RequestCookies | ReadonlyRequestCookies) => {
   const accessTokenCookie = cookieStore.get("accessToken");
@@ -14,10 +16,13 @@ export const getUser = async (cookieStore: RequestCookies | ReadonlyRequestCooki
   }
 };
 
-export const updateUser = (updatedData: updateUserType) => async () => {
+export const updateUser = (updatedData: updateUserType, router: AppRouterInstance) => async () => {
   try {
-   const data = (await UserAPI.updateUser(updatedData)).data;
+    const data = (await UserAPI.updateUser(updatedData)).data;
     successNotify(data.message);
+    setTimeout(() => {
+      router.refresh();
+    }, toastRedirectTimeout);
   } catch (error: any) {
     errorNotify(translateErrors(error));
   }

@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import * as userActions from "@/store/slices/user/currentUser";
+import { usePathname, useRouter } from "next/navigation";
 
 type propsType = {
   user: any;
@@ -9,21 +10,23 @@ type propsType = {
 
 const SetUser: React.FC<propsType> = ({ user }) => {
   const dispatch = useDispatch();
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
-    console.log(user)
-    if (user) { // authorised
+    console.log(user);
+    if (user) {
+      // authorised
       dispatch(userActions.setCurrentUser(user));
-      // if(pathname?.startsWith("/auth")){
-      //   router.replace("/dashboard");
-      // }
+      if (pathname?.startsWith("/auth")) {
+        router.replace("/dashboard");
+      }
+    } else {
+      // unauthorised
+      if (pathname?.startsWith("/dashboard")) {
+        router.replace("/auth");
+      }
     }
-    // else{ // unauthorised
-    //   if(pathname?.startsWith("/dashboard")){
-    //     router.replace("/auth");
-    //   }
-    // }
-
   }, [dispatch, user]);
 
   return null;

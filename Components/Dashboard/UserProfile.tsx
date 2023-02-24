@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Logout, Setting2, User } from "iconsax-react";
 import DropDown from "@/Components/UI/DropDown";
@@ -41,7 +42,7 @@ const UserProfile: React.FC = () => {
         <DropDown items={dropdownItems}>
           <IconText className={"items-start b1"}>
             <User size="26" />
-            <p>{userInfo.fullName || "کاربر عادی"}</p>
+            {userInfo.fullName ? <p>{userInfo.fullName}</p> : <p>کاربر عادی</p>}
           </IconText>
         </DropDown>
       </div>

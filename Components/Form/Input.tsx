@@ -5,7 +5,7 @@ import { inputType } from "@/Components/Form/types";
 import { Danger } from "iconsax-react";
 
 type propsType = {
-  type: "email" | "text" | "password" | "phone";
+  type: "text" | "password";
   disabled?: boolean;
 };
 

@@ -6,14 +6,16 @@ import { canSubmit, changeInputs } from "@/Components/Form/functions";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import { defaultFormType } from "@/Components/Domain/Profile/types";
 import { updateUser } from "@/services/api/User/handlers";
+import { useRouter } from "next/navigation";
 
 const SetFullNameForm: React.FC<defaultFormType> = ({ defaultValue }) => {
   const [inputs, setInputs] = useState({
     fullName: defaultValue ?? "",
   });
 
+  const router = useRouter();
   const onChange = changeInputs(setInputs, inputs);
-  const onSubmit = updateUser(inputs);
+  const onSubmit = updateUser(inputs, router);
 
   return (
     <DarkContainer className={"w-full flex flex-col gap-6"} size={"free"}>

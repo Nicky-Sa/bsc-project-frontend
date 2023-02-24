@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Email from "@/Components/Form/Email";
 import { canSubmit, changeInputs, checkEmail, checkPassword, checkPasswordMatch } from "@/Components/Form/functions";
 import Password from "@/Components/Form/Password";
 import Form from "@/Components/Form/Form";
 import AuthAPI from "@/services/api/Auth/AuthAPI";
 import { useRouter } from "next/navigation";
 import { authHandler } from "@/services/api/Auth/handlers";
+import Text from "@/Components/Form/Text";
 
 const SignUpForm: React.FC = () => {
   const [inputs, setInputs] = useState({
@@ -36,7 +36,7 @@ const SignUpForm: React.FC = () => {
 
   return (
     <Form buttonName={"ثبت‌نام"} buttonDisabled={canSubmit(inputs, errors)} onSubmit={onSubmit}>
-      <Email
+      <Text
         name={"username"}
         state={inputs.username}
         placeholder={"ایمیل"}

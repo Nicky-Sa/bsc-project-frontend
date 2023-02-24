@@ -11,8 +11,8 @@ const initialState: userState = {
     role: "",
   },
   packageInfo: {
-    level: "gold",
-    daysLeft: 12,
+    currentPackageLevel: null,
+    balanceLeft: 0,
   },
 };
 
@@ -21,12 +21,15 @@ const slice = createSlice({
   initialState,
   reducers: {
     setCurrentUser: (state, action) => {
-      state.userInfo = action.payload
+      const { currentPackageLevel, balanceLeft, ...userInfo } = action.payload;
+      state.userInfo = userInfo;
+      state.packageInfo.currentPackageLevel = currentPackageLevel;
+      state.packageInfo.balanceLeft = balanceLeft;
     },
   },
 });
 
-export const {setCurrentUser} = slice.actions;
+export const { setCurrentUser } = slice.actions;
 export const currentUserReducer = slice.reducer;
 
 //  const userInfo = useSelector((state: storeType) => state.currentUserReducer.userInfo)

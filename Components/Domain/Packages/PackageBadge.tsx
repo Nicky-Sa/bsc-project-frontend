@@ -8,9 +8,9 @@ import PackagePopover from "@/Components/Domain/Packages/PackagePopover";
 import "@/global/antStyles.css";
 import { extractPackageInfo } from "@/Components/Domain/Packages/functions";
 
-const PackageBadge: React.FC<packageType> = ({ level, daysLeft }) => {
-  let iconClassName = level ? `text-badge-${level}` : "text-neutral-8";
-  const [packageName, packageImg] = extractPackageInfo(level);
+const PackageBadge: React.FC<packageType> = ({ currentPackageLevel, balanceLeft }) => {
+  let iconClassName = currentPackageLevel ? `text-badge-${currentPackageLevel}` : "text-neutral-8";
+  const [packageName, packageImg] = extractPackageInfo(currentPackageLevel as string);
 
   return (
     <Popover
@@ -18,8 +18,7 @@ const PackageBadge: React.FC<packageType> = ({ level, daysLeft }) => {
         <PackagePopover
           packageName={packageName as string}
           packageImg={packageImg as number}
-          level={level}
-          daysLeft={daysLeft}
+          balanceLeft={balanceLeft}
         />
       }
     >

@@ -1,13 +1,16 @@
 import React from "react";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
+import { getAllPackages } from "@/services/api/Packages/handlers";
+import { singlePackageType } from "@/Components/Domain/Packages/types";
 import Package from "@/Components/Domain/Packages/SinglePackage";
-import { properties } from "@/mock/packagesProperties";
 
-const PackagesPage: React.FC = () => {
+const PackagesPage: () => Promise<JSX.Element> = async () => {
+  const packagesProperties = await getAllPackages();
+
   return (
     <DarkContainer className={"w-full flex flex-row flex-wrap gap-12 items-start justify-center"} size={"free"}>
-      {properties.map((item, i) => (
-        <Package key={i} properties={item} />
+      {packagesProperties?.map((item: singlePackageType, i: number) => (
+        <Package key={i} features={item.features} level={item.level} />
       ))}
     </DarkContainer>
   );

@@ -9,33 +9,23 @@ import { successNotify } from "@/Components/Notification/Toast";
 import { useSelector } from "react-redux";
 import { storeType } from "@/store";
 import { extractPackageInfo } from "@/Components/Domain/Packages/functions";
+import { singlePackageType } from "@/Components/Domain/Packages/types";
 
-type propsType = {
-  properties: {
-    level: string;
-    items: {
-      key: string;
-      value: string | number;
-      unit?: string;
-    }[];
-  };
-};
-
-const Package: React.FC<propsType> = ({ properties }) => {
+const Package: React.FC<singlePackageType> = ({ features, level }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [buttonState, setButtonState] = useState("active");
   const packageInfo = useSelector((state: storeType) => state.currentUserReducer.packageInfo);
-  const [packageName, packageImg] = extractPackageInfo(properties.level);
+  const [packageName, packageImg] = extractPackageInfo(level);
 
   useEffect(() => {
-    if (packageInfo.level) {
-      if (packageInfo.level === properties.level) {
+    if (packageInfo.currentPackageLevel) {
+      if (packageInfo.currentPackageLevel === level) {
         setButtonState("currentPackage");
       } else {
         setButtonState("disabled");
       }
     }
-  }, [packageInfo.level, properties.level]);
+  }, [packageInfo.currentPackageLevel, level]);
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -56,7 +46,7 @@ const Package: React.FC<propsType> = ({ properties }) => {
     >
       <div className={"flex flex-col gap-10 px-16 pt-56 pb-20"}>
         <h3 className={"text-center text-primary-light-9 drop-shadow-lg brightness-110"}>{packageName}</h3>
-        {properties.items.map((item, i) => (
+        {features.map((item, i) => (
           <div key={i} className={"flex flex-row gap-2 items-center"}>
             <TickCircle size="28" />
             <p className={"b1 font-bold"}>{item.key}:</p>
@@ -69,7 +59,11 @@ const Package: React.FC<propsType> = ({ properties }) => {
             خرید
           </Button>
         )}
-        {buttonState === "currentPackage" && <Button variation={"success"} className={"cursor-not-allowed"}>بسته فعلی</Button>}
+        {buttonState === "currentPackage" && (
+          <Button variation={"success"} className={"cursor-not-allowed"}>
+            بسته فعلی
+          </Button>
+        )}
         {buttonState === "disabled" && (
           <Button variation={"fill"} disabled={true}>
             غیرقابل خرید
