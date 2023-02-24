@@ -1,5 +1,5 @@
 import React from "react";
-import "@/Components/antStyles.css";
+import "@/global/antStyles.css";
 import { Add } from "iconsax-react";
 import { childrenType } from "@/global/types";
 import { Modal as AntModal } from "antd";

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { coordinateType } from "@/global/types";
 import dynamic from "next/dynamic";
 import { Skeleton } from "antd";
-import "@/Components/antStyles.css";
+import "@/global/antStyles.css";
 import { getAddress } from "@/Components/Map/functions";
 // @ts-ignore
 import Mapir from "mapir-react-component";

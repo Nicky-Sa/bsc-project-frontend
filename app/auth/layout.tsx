@@ -1,8 +1,8 @@
 import React from "react";
-import { getUser } from "@/utils/functions";
 import { redirect } from "next/navigation";
 import SetUser from "@/Components/Dashboard/SetUser";
 import { cookies } from "next/headers";
+import { getUser } from "@/services/api/User/handlers";
 
 const AuthLayout: ({ children }: { children: any }) => Promise<JSX.Element> = async ({ children }) => {
   /*

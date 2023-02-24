@@ -5,7 +5,7 @@ import Chips from "@/Components/UI/Chips";
 import { Popover } from "antd";
 import { packageType } from "@/Components/Domain/Packages/types";
 import PackagePopover from "@/Components/Domain/Packages/PackagePopover";
-import "@/Components/antStyles.css";
+import "@/global/antStyles.css";
 import { extractPackageInfo } from "@/Components/Domain/Packages/functions";
 
 const PackageBadge: React.FC<packageType> = ({ level, daysLeft }) => {

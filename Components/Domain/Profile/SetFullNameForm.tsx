@@ -3,20 +3,17 @@ import React, { useState } from "react";
 import Form from "@/Components/Form/Form";
 import Text from "@/Components/Form/Text";
 import { canSubmit, changeInputs } from "@/Components/Form/functions";
-import { useRouter } from "next/navigation";
-import { authHandler } from "@/Components/Domain/Auth/functions";
-import AuthAPI from "@/services/api/AuthAPI";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import { defaultFormType } from "@/Components/Domain/Profile/types";
+import { updateUser } from "@/services/api/User/handlers";
 
 const SetFullNameForm: React.FC<defaultFormType> = ({ defaultValue }) => {
   const [inputs, setInputs] = useState({
     fullName: defaultValue ?? "",
   });
 
-  const router = useRouter();
   const onChange = changeInputs(setInputs, inputs);
-  const onSubmit = authHandler(inputs, AuthAPI.login, router);
+  const onSubmit = updateUser(inputs);
 
   return (
     <DarkContainer className={"w-full flex flex-col gap-6"} size={"free"}>

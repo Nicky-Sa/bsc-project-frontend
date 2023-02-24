@@ -1,10 +1,10 @@
 import axios from "axios";
 import { baseRoute } from "@/utils/consts";
-import { cookieType } from "@/services/api/types";
+import { cookieType, updateUserType } from "@/services/api/User/types";
 import { parseCookie } from "@/services/api/functions";
 
-export default class UsersAPI {
-  static init(cookies: cookieType[]) {
+export default class UserAPI {
+  static init(cookies?: cookieType[]) {
     let headers = {
       Accept: "application/json",
       Cookie: parseCookie(cookies),
@@ -20,5 +20,9 @@ export default class UsersAPI {
 
   static getUser = async (cookies: cookieType[]) => {
     return await this.init(cookies).get("/current");
+  };
+
+  static updateUser = async (data: updateUserType) => {
+    return await this.init().put("/update", data);
   };
 }

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { baseRoute } from "@/utils/consts";
-import { authType } from "@/services/api/types";
+import { authType } from "@/services/api/Auth/types";
 
 export default class AuthAPI {
   static init() {
@@ -22,5 +22,9 @@ export default class AuthAPI {
 
   static login = async (data: authType) => {
     return await this.init().post("/login", data);
+  };
+
+  static logout = async () => {
+    return await this.init().get("/logout");
   };
 }

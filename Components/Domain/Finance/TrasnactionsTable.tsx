@@ -2,7 +2,7 @@
 import React from "react";
 import { Table as AntTable, Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
-import "@/Components/antStyles.css";
+import "@/global/antStyles.css";
 
 import { CheckCircleOutlined, CloseCircleOutlined, SyncOutlined } from "@ant-design/icons";
 import { transactionsType } from "@/Components/Domain/Finance/types";

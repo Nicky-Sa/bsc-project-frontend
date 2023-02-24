@@ -4,9 +4,9 @@ import Email from "@/Components/Form/Email";
 import { canSubmit, changeInputs, checkEmail, checkPassword, checkPasswordMatch } from "@/Components/Form/functions";
 import Password from "@/Components/Form/Password";
 import Form from "@/Components/Form/Form";
-import AuthAPI from "@/services/api/AuthAPI";
-import { authHandler } from "@/Components/Domain/Auth/functions";
+import AuthAPI from "@/services/api/Auth/AuthAPI";
 import { useRouter } from "next/navigation";
+import { authHandler } from "@/services/api/Auth/handlers";
 
 const SignUpForm: React.FC = () => {
   const [inputs, setInputs] = useState({

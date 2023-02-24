@@ -2,12 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Form from "@/Components/Form/Form";
 import { canSubmit, changeInputs, checkPhoneNumber } from "@/Components/Form/functions";
-import { useRouter } from "next/navigation";
-import { authHandler } from "@/Components/Domain/Auth/functions";
-import AuthAPI from "@/services/api/AuthAPI";
 import Phone from "@/Components/Form/PhoneNumber";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import { defaultFormType } from "@/Components/Domain/Profile/types";
+import { updateUser } from "@/services/api/User/handlers";
 
 const SetPhoneNumberForm: React.FC<defaultFormType> = ({ defaultValue }) => {
   const [inputs, setInputs] = useState({
@@ -25,9 +23,8 @@ const SetPhoneNumberForm: React.FC<defaultFormType> = ({ defaultValue }) => {
     }));
   }, [inputs]);
 
-  const router = useRouter();
   const onChange = changeInputs(setInputs, inputs);
-  const onSubmit = authHandler(inputs, AuthAPI.login, router);
+  const onSubmit = updateUser(inputs);
 
   return (
     <DarkContainer className={"w-full flex flex-col gap-6"} size={"free"}>

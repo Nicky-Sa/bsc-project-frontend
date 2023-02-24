@@ -1,6 +1,6 @@
 import React from "react";
 import MessagesTable from "@/Components/Domain/Messages/MessagesTable";
-import "@/Components/antStyles.css";
+import "@/global/antStyles.css";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import Button from "@/Components/UI/Button";
 import IconText from "@/Components/UI/IconText";
