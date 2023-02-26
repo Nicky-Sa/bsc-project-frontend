@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { TickCircle } from "iconsax-react";
 import "./backgrounds.css";
 import Button from "@/Components/UI/Button";
-import { reformat } from "@/utils/functions";
+import { reformat, sortById } from "@/utils/functions";
 import Modal from "@/Components/Notification/Modal";
 import { successNotify } from "@/Components/Notification/Toast";
 import { useSelector } from "react-redux";
@@ -46,7 +46,7 @@ const Package: React.FC<singlePackageType> = ({ features, level }) => {
     >
       <div className={"flex flex-col gap-10 px-16 pt-56 pb-20"}>
         <h3 className={"text-center text-primary-light-9 drop-shadow-lg brightness-110"}>{packageName}</h3>
-        {features.map((item, i) => (
+        {sortById(features).map((item, i) => (
           <div key={i} className={"flex flex-row gap-2 items-center"}>
             <TickCircle size="28" />
             <p className={"b1 font-bold"}>{item.key}:</p>

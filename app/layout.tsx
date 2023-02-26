@@ -26,12 +26,10 @@ const RootLayout: React.FC<childrenType> = ({ children }) => {
         <Provider store={store}>
           <PersistGate loading={null} persistor={storePersist}>
             {() => (
-              <>
-                <body className={classNames("b1")}>
-                  {children}
-                  <Toast />
-                </body>
-              </>
+              <body className={classNames("b1")}>
+                {children}
+                <Toast />
+              </body>
             )}
           </PersistGate>
         </Provider>

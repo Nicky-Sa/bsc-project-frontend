@@ -14,7 +14,6 @@ const SetUser: React.FC<propsType> = ({ user }) => {
   const router = useRouter();
 
   useEffect(() => {
-    console.log(user);
     if (user) {
       // authorised
       dispatch(userActions.setCurrentUser(user));

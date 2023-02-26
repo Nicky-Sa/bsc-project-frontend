@@ -29,3 +29,9 @@ export const nestedSearch: any = (array: any[], nestKey: string, searchKey: stri
 export const reformat = (number: number | string, postfix = "") => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (postfix ? (" " + postfix) : "");
 };
+
+export const sortById = (items: any[]) =>{
+  return items.sort((a, b) => {
+    return a.id.substr(1) - b.id.substr(1)
+  })
+}

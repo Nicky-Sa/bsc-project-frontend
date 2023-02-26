@@ -1,6 +1,6 @@
 import React from "react";
 import { Column } from "@ant-design/plots";
-import "@/global/antStyles.css";
+
 import { ListItem } from "@antv/component";
 import { Datum } from "@antv/g2plot";
 import { Marker } from "@antv/g2/lib/interface";

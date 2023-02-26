@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Popover } from "antd";
-import "@/global/antStyles.css";
+
 import { coordinateType } from "@/global/types";
 import { getAddress } from "@/Components/Map/functions";
 // @ts-ignore

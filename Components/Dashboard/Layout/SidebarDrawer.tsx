@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Drawer } from "antd";
 import { Add, HambergerMenu } from "iconsax-react";
-import "@/global/antStyles.css";
+
 import Sidebar from "@/Components/Dashboard/Layout/Sidebar";
 
 const SidebarDrawer: React.FC = () => {

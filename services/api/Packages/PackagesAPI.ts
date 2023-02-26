@@ -19,4 +19,3 @@ export default class PackagesAPI {
     return await this.init().get("/all");
   };
 }
-//    return await fetch(baseRoute + '/packages/all', { next: { revalidate: 10 } });

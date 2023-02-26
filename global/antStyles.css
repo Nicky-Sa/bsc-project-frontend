@@ -82,3 +82,9 @@
 .ant-modal-root .ant-modal-mask{
   backdrop-filter: blur(8px);
 }
+
+.ant-tag{
+  display: flex;
+  width: fit-content;
+  align-items: center;
+}
