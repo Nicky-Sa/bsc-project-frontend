@@ -18,7 +18,7 @@ const DashboardLayout: ({ children }: { children: any }) => Promise<JSX.Element>
   return (
     <>
       <SetUser user={user} />
-      {children}
+      {user && children}
     </>
   );
 };

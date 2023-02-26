@@ -16,6 +16,7 @@ export default class PackagesAPI {
   }
 
   static getAll = async () => {
+    // await wait(40000)
     return await this.init().get("/all");
   };
 }

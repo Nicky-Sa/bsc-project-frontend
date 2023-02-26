@@ -17,14 +17,6 @@ const SetUser: React.FC<propsType> = ({ user }) => {
     if (user) {
       // authorised
       dispatch(userActions.setCurrentUser(user));
-      if (pathname?.startsWith("/auth")) {
-        router.replace("/dashboard/user");
-      }
-    } else {
-      // unauthorised
-      if (pathname?.startsWith("/dashboard")) {
-        router.replace("/auth");
-      }
     }
   }, [dispatch, pathname, router, user]);
 
