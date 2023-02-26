@@ -17,7 +17,7 @@ export const authHandler =
       ).data;
       successNotify(data.message);
       setTimeout(() => {
-        router.replace("/dashboard");
+        router.replace("/dashboard/user");
       }, toastRedirectTimeout);
     } catch (error) {
       errorNotify(translateErrors(error));

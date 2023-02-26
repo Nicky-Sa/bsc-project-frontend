@@ -12,7 +12,7 @@ const AuthLayout: ({ children }: { children: any }) => Promise<JSX.Element> = as
   const user = await getUser(cookieStore);
 
   if (user) {
-    redirect("/dashboard");
+    redirect("/dashboard/user");
   }
 
   return (

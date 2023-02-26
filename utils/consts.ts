@@ -6,7 +6,7 @@ export const baseRoute = "http://localhost:5002";
 export const toastRedirectTimeout = 4500;
 
 export const navigation = [
-  { name: "خانه", href: "/dashboard/user/home", icon: Home2, sidebar: true },
+  { name: "خانه", href: "/dashboard/user", icon: Home2, sidebar: true },
   { name: "تاریخچه‌ی موقعیت‌ها", href: "/dashboard/user/history", icon: Map1, sidebar: true },
   { name: "امور مالی", href: "/dashboard/user/finance", icon: Moneys, sidebar: true },
   { name: "پیام‌های تگ‌ها", href: "/dashboard/user/tagzMessages", icon: DeviceMessage, sidebar: true },

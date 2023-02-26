@@ -19,7 +19,7 @@ const MessagesTableContainer: React.FC<propsType> = ({ data }) => {
         <h6>پیام‌های دریافتی از تگ‌ها</h6>
         <Button variation={"text"}>
           <IconText className={"items-center"}>
-            <Link href={"/dashboard/tagzMessages"} className={"b1"}>نمایش همه</Link>
+            <Link href={"/dashboard/user/tagzMessages"} className={"b1"}>نمایش همه</Link>
             <ArrowLeft2 size="24" className={"mb-[3px]"} />
           </IconText>
         </Button>

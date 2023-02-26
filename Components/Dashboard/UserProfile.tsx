@@ -17,7 +17,7 @@ const UserProfile: React.FC = () => {
     {
       key: "1",
       label: (
-        <Link href={"/dashboard/profile"}>
+        <Link href={"/dashboard/user/profile"}>
           <IconText className={"min-w-[10rem] items-center text-neutral-1"}>
             <Setting2 size="20" />
             <p>تنظیمات</p>
