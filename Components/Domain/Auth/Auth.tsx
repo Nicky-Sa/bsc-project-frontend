@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "@/public/logo.png";
 import Tab from "@/Components/Domain/Auth/Tab";
 import LoginForm from "@/Components/Domain/Auth/LoginForm";
 import SignUpForm from "@/Components/Domain/Auth/SignupForm";
@@ -22,7 +21,7 @@ const Auth: React.FC = () => {
       <div
         className={"xl:absolute w-full sm:w-2/3 md:w-1/3 xl:w-[25%] 2xl:w-[19%] m-auto right-[14%] 2xl:right-[22%] top-[15%] flex flex-col gap-12 justify-between items-center"}
       >
-        <img src={logo.src} className={"w-48 h-auto"} alt={"logo"} />
+        <img src={"logo.png"} className={"w-48 h-auto"} alt={"logo"} />
         <Tab tabItems={tabItems} />
       </div>
     </div>

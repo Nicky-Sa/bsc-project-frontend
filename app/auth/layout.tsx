@@ -3,11 +3,13 @@ import { redirect } from "next/navigation";
 import SetUser from "@/Components/Dashboard/SetUser";
 import { cookies } from "next/headers";
 import { getUser } from "@/services/api/User/handlers";
+import { wait } from "@antv/component/lib/util/util";
 
 const AuthLayout: ({ children }: { children: any }) => Promise<JSX.Element> = async ({ children }) => {
   /*
   ServerSide code to check user token:
   */
+  await wait(20000)
   const cookieStore = cookies();
   const user = await getUser(cookieStore);
 
