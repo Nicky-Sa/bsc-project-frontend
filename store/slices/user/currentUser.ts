@@ -12,7 +12,7 @@ const initialState: userState = {
   },
   packageInfo: {
     currentPackageLevel: null,
-    balanceLeft: 0,
+    currentBalance: 0,
   },
 };
 
@@ -21,10 +21,10 @@ const slice = createSlice({
   initialState,
   reducers: {
     setCurrentUser: (state, action) => {
-      const { currentPackageLevel, balanceLeft, ...userInfo } = action.payload;
+      const { currentPackageLevel, currentBalance, ...userInfo } = action.payload;
       state.userInfo = userInfo;
       state.packageInfo.currentPackageLevel = currentPackageLevel;
-      state.packageInfo.balanceLeft = balanceLeft;
+      state.packageInfo.currentBalance = currentBalance;
     },
   },
 });
@@ -32,4 +32,3 @@ const slice = createSlice({
 export const { setCurrentUser } = slice.actions;
 export const currentUserReducer = slice.reducer;
 
-//  const userInfo = useSelector((state: storeType) => state.currentUserReducer.userInfo)

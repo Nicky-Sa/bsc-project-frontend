@@ -8,7 +8,7 @@ import PackagePopover from "@/Components/Domain/Packages/PackagePopover";
 
 import { extractPackageInfo } from "@/Components/Domain/Packages/functions";
 
-const PackageBadge: React.FC<packageType> = ({ currentPackageLevel, balanceLeft }) => {
+const PackageBadge: React.FC<packageType> = ({ currentPackageLevel, currentBalance }) => {
   let iconClassName = currentPackageLevel ? `text-badge-${currentPackageLevel}` : "text-neutral-8";
   const [packageName, packageImg] = extractPackageInfo(currentPackageLevel as string);
 
@@ -18,7 +18,7 @@ const PackageBadge: React.FC<packageType> = ({ currentPackageLevel, balanceLeft 
         <PackagePopover
           packageName={packageName as string}
           packageImg={packageImg as number}
-          balanceLeft={balanceLeft}
+          currentBalance={currentBalance}
         />
       }
     >

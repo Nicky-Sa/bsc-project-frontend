@@ -4,7 +4,7 @@ import { authType } from "@/services/api/Auth/types";
 
 export default class AuthAPI {
   static init() {
-    let headers = {
+    const headers = {
       Accept: "application/json",
     };
 

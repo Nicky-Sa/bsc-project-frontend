@@ -16,7 +16,7 @@ const BatteryUsage: React.FC<multiColumnChartType> = ({ data }) => {
       <h6>نمودار مصرف باتری</h6>
       <MultiColumnChart
         data={data}
-        fields={["month", "value", "tagNumber"]}
+        fields={["date", "value", "tagNumber"]}
         color={["#6359E9", "#64CFF6", "#7E55D6", "#B199E6"]}
         unit={"%"}
       />

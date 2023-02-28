@@ -4,7 +4,7 @@ import { wait } from "@antv/component/lib/util/util";
 
 export default class PackagesAPI {
   static init() {
-    let headers = {
+    const headers = {
       Accept: "application/json",
     };
 

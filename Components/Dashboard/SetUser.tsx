@@ -12,6 +12,7 @@ const SetUser: React.FC<propsType> = ({ user }) => {
   const dispatch = useDispatch();
   const pathname = usePathname();
   const router = useRouter();
+  console.log(user)
 
   useEffect(() => {
     if (user) {

@@ -5,7 +5,7 @@ import { parseCookie } from "@/services/api/functions";
 
 export default class UserAPI {
   static init(cookies?: cookieType[]) {
-    let headers = {
+    const headers = {
       Accept: "application/json",
       Cookie: parseCookie(cookies),
     };

@@ -1,6 +1,6 @@
 export type multiColumnChartType = {
   data: {
-    month: string;
+    date: string;
     tagNumber: string;
     value: number;
   }[];

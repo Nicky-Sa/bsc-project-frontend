@@ -1,6 +1,6 @@
 export type packageType = {
   currentPackageLevel: "gold" | "silver" | "bronze" | null;
-  balanceLeft: number;
+  currentBalance: number;
 };
 
 export type singlePackageType = {

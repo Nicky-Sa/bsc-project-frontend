@@ -24,7 +24,7 @@ const Header: React.FC = () => {
       <h4 className={"hidden lg:block"}>{pageTitle}</h4>
       <SidebarDrawer />
       <div className={"flex flex-row items-end gap-8"}>
-        <PackageBadge currentPackageLevel={packageInfo.currentPackageLevel} balanceLeft={packageInfo.balanceLeft} />
+        <PackageBadge currentPackageLevel={packageInfo.currentPackageLevel} currentBalance={packageInfo.currentBalance} />
         <UserProfile />
       </div>
     </header>
