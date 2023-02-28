@@ -1,6 +1,6 @@
 import React from "react";
 import SetUser from "@/Components/Dashboard/SetUser";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { getUser } from "@/services/api/User/handlers";
 

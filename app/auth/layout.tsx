@@ -4,6 +4,12 @@ import SetUser from "@/Components/Dashboard/SetUser";
 import { cookies } from "next/headers";
 import { getUser } from "@/services/api/User/handlers";
 import { wait } from "@antv/component/lib/util/util";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'TAGZ - Auth',
+  description: 'Authentication page',
+};
 
 const AuthLayout: ({ children }: { children: any }) => Promise<JSX.Element> = async ({ children }) => {
   /*
