@@ -13,7 +13,6 @@ import Toast from "@/Components/Notification/Toast";
 const RootLayout: React.FC<childrenType> = ({ children }) => {
   return (
     <html lang="fa">
-      <head />
       <ConfigProvider
         theme={{
           token: {
