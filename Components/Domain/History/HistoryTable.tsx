@@ -13,8 +13,8 @@ const LocationPopover = dynamic(() => import("@/Components/Domain/History/Locati
 const columns: ColumnsType<historyType> = [
   {
     title: "شماره تگ",
-    dataIndex: "tagNumber",
-    key: "tagNumber",
+    dataIndex: "tagId",
+    key: "tagId",
     render: (text) => <p>#{text}</p>,
   },
   {

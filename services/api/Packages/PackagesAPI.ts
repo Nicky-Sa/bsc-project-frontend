@@ -1,6 +1,5 @@
 import axios from "axios";
 import { baseRoute } from "@/utils/consts";
-import { wait } from "@antv/component/lib/util/util";
 
 export default class PackagesAPI {
   static init() {
@@ -17,7 +16,6 @@ export default class PackagesAPI {
   }
 
   static getAll = async () => {
-    await wait(40000)
     return await this.init().get("/all");
   };
 }

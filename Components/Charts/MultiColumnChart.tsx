@@ -30,7 +30,7 @@ const MultiColumnChart = <T extends object>({ data, fields, color, unit, height 
     columnStyle: {
       radius: [20, 20, 0, 0],
     },
-    colorField: "tagNumber", // or seriesField in some cases
+    colorField: "tagId",
     color: color,
     xAxis: {
       label: {
@@ -90,7 +90,7 @@ const MultiColumnChart = <T extends object>({ data, fields, color, unit, height 
     },
     tooltip: {
       formatter: (datum: Datum) => {
-        return { name: `#${datum.tagNumber}`, value: `${reformat(datum.value, unit)}` };
+        return { name: `#${datum.tagId}`, value: `${reformat(datum.value, unit)}` };
       },
     },
   };

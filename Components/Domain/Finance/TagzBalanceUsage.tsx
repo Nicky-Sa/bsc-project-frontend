@@ -20,7 +20,7 @@ const TagzBalanceUsage: React.FC<multiColumnChartType> = ({data}) => {
 
         <MultiColumnChart
             data={data}
-            fields={["month", "value", "tagNumber"]}
+            fields={["month", "value", "tagId"]}
             color={["#6359E9", "#7E55D6", "#3D00A1", "#A588E2"]}
             unit={"تومان"}
             height={350}

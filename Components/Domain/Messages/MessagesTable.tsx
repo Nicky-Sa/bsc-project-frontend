@@ -2,14 +2,14 @@
 import React from "react";
 import { Popover, Table as AntTable } from "antd";
 import type { ColumnsType } from "antd/es/table";
-
 import { messagesType } from "@/Components/Domain/Messages/types";
 
 const columns: ColumnsType<messagesType> = [
   {
-    title: "آیدی",
-    dataIndex: "id",
-    key: "id",
+    title: "شماره تگ",
+    dataIndex: "tagId",
+    key: "tagId",
+    render: (text) => <p>#{text}</p>,
   },
   {
     title: "نوع",
@@ -17,20 +17,14 @@ const columns: ColumnsType<messagesType> = [
     key: "type",
   },
   {
-    title: "شماره تگ",
-    dataIndex: "tagNumber",
-    key: "tagNumber",
-    render: (text) => <p>#{text}</p>,
-  },
-  {
     title: "تاریخ و زمان",
-    key: "timestamp",
-    dataIndex: "timestamp",
+    key: "dateTime",
+    dataIndex: "dateTime",
   },
   {
     title: "پیام",
-    key: "message",
-    dataIndex: "message",
+    key: "text",
+    dataIndex: "text",
     render: (text) => {
       return (
         <Popover content={text} title="پیام:">

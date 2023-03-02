@@ -1,7 +1,7 @@
 export type multiColumnChartType = {
   data: {
-    date: string;
-    tagNumber: string;
+    dateTime: string;
+    tagId: number;
     value: number;
   }[];
 };

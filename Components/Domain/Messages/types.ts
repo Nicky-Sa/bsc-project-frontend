@@ -1,7 +1,6 @@
 export type messagesType = {
-  key: string;
+  tagId: number;
   type: string;
-  id: number;
-  tagNumber: string;
-  timestamp: string;
+  text: string;
+  dateTime: string;
 };
