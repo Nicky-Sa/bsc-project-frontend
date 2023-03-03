@@ -1,4 +1,4 @@
-import { cookieType } from "@/services/api/User/types";
+import { cookieType } from "@/services/api/types";
 
 export const parseCookie = (cookies?: cookieType[]) => {
   let cookieString = "";

@@ -1,8 +1,8 @@
 import { coordinateType } from "@/global/types";
 
-export type historyType = {
-  key: string;
+export type tagzLocationsType = {
+  id: string;
   tagId: string;
   coordinate: coordinateType;
-  timestamp: string;
+  dateTime: string;
 };

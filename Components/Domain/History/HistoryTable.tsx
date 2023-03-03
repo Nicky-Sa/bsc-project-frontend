@@ -2,7 +2,7 @@
 import React from "react";
 import { ColumnsType } from "antd/es/table";
 import { Popover, Table as AntTable } from "antd";
-import { historyType } from "@/Components/Domain/History/types";
+import { tagzLocationsType } from "@/Components/Domain/History/types";
 import dynamic from "next/dynamic";
 
 const LocationPopover = dynamic(() => import("@/Components/Domain/History/LocationPopover"), {
@@ -10,7 +10,7 @@ const LocationPopover = dynamic(() => import("@/Components/Domain/History/Locati
   ssr: false,
 });
 
-const columns: ColumnsType<historyType> = [
+const columns: ColumnsType<tagzLocationsType> = [
   {
     title: "شماره تگ",
     dataIndex: "tagId",
@@ -29,8 +29,8 @@ const columns: ColumnsType<historyType> = [
   },
   {
     title: "تاریخ و زمان",
-    key: "timestamp",
-    dataIndex: "timestamp",
+    key: "dateTime",
+    dataIndex: "dateTime",
   },
   {
     title: "موقعیت روی نقشه",
@@ -47,11 +47,11 @@ const columns: ColumnsType<historyType> = [
 ];
 
 type propsType = {
-  data: historyType[];
+  data: tagzLocationsType[];
 };
 
 const HistoryTable: React.FC<propsType> = ({ data }) => {
-  return <AntTable columns={columns} dataSource={data} pagination={false} scroll={{ x: "max-content" }} />;
+  return <AntTable columns={columns} dataSource={data} pagination={false} scroll={{ x: "max-content" }} rowKey={"id"} />;
 };
 
 export default HistoryTable;

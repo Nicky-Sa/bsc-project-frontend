@@ -18,11 +18,19 @@ export default class TagzDataAPI {
     });
   }
 
+  static numberOfTagz = async (cookies: cookieType[]) => {
+    return await this.init(cookies).get("/count");
+  };
+
   static getTagzBatteries = async (cookies: cookieType[]) => {
     return await this.init(cookies).get("/batteries");
   };
 
   static getTagzMessages = async (cookies: cookieType[]) => {
     return await this.init(cookies).get("/messages");
+  };
+
+  static getTagzLocations = async (cookies: cookieType[]) => {
+    return await this.init(cookies).get("/locations");
   };
 }

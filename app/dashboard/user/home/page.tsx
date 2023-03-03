@@ -2,9 +2,8 @@ import React from "react";
 import BatteryUsage from "@/Components/Domain/DashboardHome/BatteryUsage";
 import CurrentLocationMap from "@/Components/Domain/DashboardHome/CurrentLocationMap";
 import MessagesTableContainer from "@/Components/Domain/DashboardHome/MessagesTableContainer";
-import { tagzCurrentLocation } from "@/mock/tagzCurrentLocation";
 import { cookies } from "next/headers";
-import { getTagzBatteries, getTagzMessages } from "@/services/api/TagzData/handlers";
+import { getTagzBatteries, getTagzLocations, getTagzMessages, numberOfTagz } from "@/services/api/TagzData/handlers";
 
 const DashboardPage: () => Promise<JSX.Element> = async () => {
   /*
@@ -13,10 +12,12 @@ const DashboardPage: () => Promise<JSX.Element> = async () => {
   const cookieStore = cookies();
   const tagzBatteries = await getTagzBatteries(cookieStore);
   const tagzMessages = await getTagzMessages(cookieStore);
+  const tagzLocationsHistory = await getTagzLocations(cookieStore);
+  const count = await numberOfTagz(cookieStore);
 
   return (
     <>
-      <CurrentLocationMap data={tagzCurrentLocation} />
+      <CurrentLocationMap data={tagzLocationsHistory} count={count} />
 
       <div className={"flex flex-col lg:flex-row gap-4"}>
         <MessagesTableContainer data={tagzMessages.slice(-3)} />

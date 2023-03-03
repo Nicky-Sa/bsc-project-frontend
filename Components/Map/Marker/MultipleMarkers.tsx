@@ -14,7 +14,6 @@ type propsType = {
 };
 
 const MultipleMarkers: React.FC<propsType> = ({ locations }) => {
-
   return (
     <>
       {locations.map((location, i) => (

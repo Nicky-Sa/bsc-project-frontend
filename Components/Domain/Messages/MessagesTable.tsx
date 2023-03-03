@@ -42,7 +42,7 @@ type propsType = {
 
 const MessagesTable: React.FC<propsType> = ({data}) => {
   return (
-      <AntTable columns={columns} dataSource={data} pagination={false} scroll={{ x: "max-content" }} />
+      <AntTable columns={columns} dataSource={data} pagination={false} scroll={{ x: "max-content" }} rowKey={"id"} />
   );
 };
 
