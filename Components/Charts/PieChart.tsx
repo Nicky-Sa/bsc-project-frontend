@@ -6,6 +6,7 @@ import { Datum } from "@antv/g2plot";
 import { reformat } from "@/utils/functions";
 import { chartPropsType } from "@/Components/Charts/types";
 import { textStyle } from "@/Components/Charts/consts";
+import EmptyState from "@/Components/UI/EmptyState";
 
 const PieChart = <T extends object>({ data, fields, color, unit }: chartPropsType<T>) => {
   const config = {
@@ -57,7 +58,7 @@ const PieChart = <T extends object>({ data, fields, color, unit }: chartPropsTyp
       },
     },
   };
-  return <Pie {...config} />;
+  return data.length > 0 ? <Pie {...config} /> : <EmptyState />;
 };
 
 export default PieChart;

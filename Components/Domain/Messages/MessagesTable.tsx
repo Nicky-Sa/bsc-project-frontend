@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
-import { Popover, Table as AntTable } from "antd";
+import { Popover } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import { messagesType } from "@/Components/Domain/Messages/types";
+import Table from "@/Components/UI/Table";
 
 const columns: ColumnsType<messagesType> = [
   {
@@ -41,9 +42,7 @@ type propsType = {
 
 
 const MessagesTable: React.FC<propsType> = ({data}) => {
-  return (
-      <AntTable columns={columns} dataSource={data} pagination={false} scroll={{ x: "max-content" }} rowKey={"id"} />
-  );
+  return <Table columns={columns} data={data} />;
 };
 
 export default MessagesTable;

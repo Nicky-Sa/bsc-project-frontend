@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
-import { Table as AntTable, Tag } from "antd";
+import { Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import { CheckCircleOutlined, CloseCircleOutlined, SyncOutlined } from "@ant-design/icons";
 import { transactionsType } from "@/Components/Domain/Finance/types";
 import { reformat } from "@/utils/functions";
+import Table from "@/Components/UI/Table";
 
 const columns: ColumnsType<transactionsType> = [
   {
@@ -57,7 +58,7 @@ type propsType = {
 };
 
 const TransactionsTable: React.FC<propsType> = ({ data }) => {
-  return <AntTable columns={columns} dataSource={data} pagination={false} scroll={{ x: "max-content" }} />;
+  return <Table columns={columns} data={data} />;
 };
 
 export default TransactionsTable;

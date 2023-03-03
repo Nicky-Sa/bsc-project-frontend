@@ -1,14 +1,13 @@
 "use client";
 import React from "react";
 import "@/global/globals.css";
-import { ConfigProvider } from "antd";
+import { ConfigProvider, Empty } from "antd";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { classNames } from "@/utils/functions";
 import { childrenType } from "@/global/types";
 import store, { storePersist } from "@/store";
 import Toast from "@/Components/Notification/Toast";
-
 
 const RootLayout: React.FC<childrenType> = ({ children }) => {
   return (
@@ -22,6 +21,7 @@ const RootLayout: React.FC<childrenType> = ({ children }) => {
             fontSize: 16,
           },
         }}
+        renderEmpty={() => <Empty description="داده‌ای وجود ندارد." />}
       >
         <Provider store={store}>
           <PersistGate loading={null} persistor={storePersist}>

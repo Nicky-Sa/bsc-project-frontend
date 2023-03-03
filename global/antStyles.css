@@ -88,3 +88,6 @@
   width: fit-content;
   align-items: center;
 }
+.ant-empty .ant-empty-description{
+  color: #E5E5E5;
+}

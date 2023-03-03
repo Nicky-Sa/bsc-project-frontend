@@ -7,6 +7,7 @@ import { Marker } from "@antv/g2/lib/interface";
 import { reformat } from "@/utils/functions";
 import { chartPropsType } from "@/Components/Charts/types";
 import { textStyle } from "@/Components/Charts/consts";
+import EmptyState from "@/Components/UI/EmptyState";
 
 const MultiColumnChart = <T extends object>({ data, fields, color, unit, height }: chartPropsType<T>) => {
   const config = {
@@ -95,7 +96,7 @@ const MultiColumnChart = <T extends object>({ data, fields, color, unit, height 
     },
   };
 
-  return <Column {...config} />;
+  return data.length > 0 ? <Column {...config} /> : <EmptyState />;
 };
 
 export default MultiColumnChart;

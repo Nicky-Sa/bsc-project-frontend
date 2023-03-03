@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import { ColumnsType } from "antd/es/table";
-import { Popover, Table as AntTable } from "antd";
+import { Popover } from "antd";
 import { tagzLocationsType } from "@/Components/Domain/History/types";
 import dynamic from "next/dynamic";
+import Table from "@/Components/UI/Table";
 
 const LocationPopover = dynamic(() => import("@/Components/Domain/History/LocationPopover"), {
   loading: () => <p>...</p>,
@@ -51,7 +52,7 @@ type propsType = {
 };
 
 const HistoryTable: React.FC<propsType> = ({ data }) => {
-  return <AntTable columns={columns} dataSource={data} pagination={false} scroll={{ x: "max-content" }} rowKey={"id"} />;
+  return <Table columns={columns} data={data} />;
 };
 
 export default HistoryTable;
