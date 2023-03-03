@@ -48,8 +48,8 @@ const columns: ColumnsType<transactionsType> = [
   },
   {
     title: "تاریخ و زمان",
-    key: "timestamp",
-    dataIndex: "timestamp",
+    key: "dateTime",
+    dataIndex: "dateTime",
   },
 ];
 

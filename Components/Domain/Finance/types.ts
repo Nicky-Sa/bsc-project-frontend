@@ -3,5 +3,5 @@ export type transactionsType = {
   reason: string;
   amount: number;
   status: "موفق" | "ناموفق" | "درحال بررسی";
-  timestamp: string;
+  dateTime: string;
 };
