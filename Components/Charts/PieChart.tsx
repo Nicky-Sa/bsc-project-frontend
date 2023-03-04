@@ -41,6 +41,7 @@ const PieChart = <T extends object>({ data, fields, color, unit }: chartPropsTyp
     legend: {
       layout: "vertical" as "vertical",
       position: "right" as "right",
+      offsetX: 30,
       itemName: {
         style: textStyle,
         formatter: (text: string, item: ListItem, index: number) => {
