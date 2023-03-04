@@ -8,7 +8,6 @@ const initialState: userState = {
     username: "",
     phoneNumber: "",
     fullName: "",
-    role: "",
   },
   packageInfo: {
     currentPackageLevel: null,

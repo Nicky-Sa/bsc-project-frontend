@@ -4,14 +4,29 @@ import { Skeleton } from "antd";
 import React from "react";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import { reformat } from "@/utils/functions";
-import { pieChartType } from "@/Components/Charts/types";
 
 const PieChart = dynamic(() => import("@/Components/Charts/PieChart"), {
   loading: () => <Skeleton active />,
   ssr: false,
 });
 
-const TotalBalanceUsage: React.FC<pieChartType> = ({ data }) => {
+type propsType = {
+  used: number;
+  left: number;
+}
+
+const TotalBalanceUsage: React.FC<propsType> = ({ used, left }) => {
+
+  const data = [
+    {
+      title: "استفاده شده",
+      value: used
+    },
+    {
+      title: "مانده حساب",
+      value: left
+    },
+  ]
   return (
     <DarkContainer className={"basis-1/2 flex flex-col"} size={"free"}>
       <h6>نمودار هزینه کل</h6>

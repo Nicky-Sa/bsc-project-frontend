@@ -7,7 +7,6 @@ export type userState = {
     username: string;
     phoneNumber: string | null;
     fullName: string | null;
-    role: string;
   };
   packageInfo: packageType;
 };
