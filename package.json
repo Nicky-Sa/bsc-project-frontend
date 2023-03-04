@@ -6,7 +6,7 @@
     "dev": "next dev -p 3004",
     "build": "next build",
     "start": "next start -p 3004",
-    "up": "yarn run build && yarn run start",
+    "prod": "yarn run build && yarn run start",
     "lint": "next lint"
   },
   "dependencies": {
