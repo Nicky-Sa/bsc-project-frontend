@@ -1,12 +1,3 @@
-export type multiColumnChartType = {
-  data: {
-    dateTime: string;
-    tagId: string;
-    value: number;
-  }[];
-};
-
-
 export type pieChartType = {
   data: {
     type: string;
@@ -14,7 +5,6 @@ export type pieChartType = {
     value: number;
   }[];
 };
-
 
 
 export type chartPropsType<T> = {

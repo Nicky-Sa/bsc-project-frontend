@@ -3,14 +3,22 @@ import React from "react";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import dynamic from "next/dynamic";
 import { Skeleton } from "antd";
-import { multiColumnChartType } from "@/Components/Charts/types";
 
 const MultiColumnChart = dynamic(() => import("@/Components/Charts/MultiColumnChart"), {
   loading: () => <Skeleton active />,
   ssr: false,
 });
 
-const BatteryUsage: React.FC<multiColumnChartType> = ({ data }) => {
+type propsType = {
+  data: {
+    dateTime: string;
+    tagId: string;
+    value: number;
+  }[];
+};
+
+
+const BatteryUsage: React.FC<propsType> = ({ data }) => {
   return (
     <DarkContainer className={"basis-1/2 flex flex-col gap-4"} size={"free"}>
       <h6>نمودار مصرف باتری</h6>

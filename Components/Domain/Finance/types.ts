@@ -1,7 +1,7 @@
 export type transactionsType = {
-  key: string;
+  id: string;
   reason: string;
-  amount: number;
+  value: number;
   status: "موفق" | "ناموفق" | "درحال بررسی";
   dateTime: string;
 };

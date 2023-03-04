@@ -33,4 +33,9 @@ export default class TagzDataAPI {
   static getTagzLocations = async (cookies: cookieType[]) => {
     return await this.init(cookies).get("/locations");
   };
+
+  static getBalanceUsages = async (cookies: cookieType[]) => {
+    return await this.init(cookies).get("/balanceUsages");
+  };
+
 }

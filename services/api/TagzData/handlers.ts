@@ -29,6 +29,7 @@ export const getTagzMessages = async (cookieStore: RequestCookies | ReadonlyRequ
     console.log(error?.response?.data);
   }
 };
+
 export const getTagzLocations = async (cookieStore: RequestCookies | ReadonlyRequestCookies) => {
   const accessTokenCookie = cookieStore.get("accessToken");
   try {
@@ -42,6 +43,15 @@ export const getTagzLocations = async (cookieStore: RequestCookies | ReadonlyReq
       delete item.lon;
     }
     return data
+  } catch (error: any) {
+    console.log(error?.response?.data);
+  }
+};
+
+export const getBalanceUsages = async (cookieStore: RequestCookies | ReadonlyRequestCookies) => {
+  const accessTokenCookie = cookieStore.get("accessToken");
+  try {
+    return (await TagzDataAPI.getBalanceUsages([{ name: "accessToken", value: accessTokenCookie?.value ?? "" }])).data.data;
   } catch (error: any) {
     console.log(error?.response?.data);
   }

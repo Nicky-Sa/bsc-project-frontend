@@ -15,8 +15,8 @@ const columns: ColumnsType<transactionsType> = [
   },
   {
     title: "مبلغ",
-    dataIndex: "amount",
-    key: "amount",
+    dataIndex: "value",
+    key: "value",
     render: (amount) => <p className={"b1"}>{reformat(amount, "تومان")}</p>,
   },
   {
