@@ -5,7 +5,6 @@ import Header from "@/Components/Dashboard/Layout/Header";
 import { childrenType } from "@/global/types";
 import { Metadata } from "next";
 
-
 export const metadata: Metadata = {
   title: 'TAGZ - Dashboard',
   description: 'Dashboard page',

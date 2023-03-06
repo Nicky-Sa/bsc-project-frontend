@@ -1,7 +1,7 @@
 import axios from "axios";
-import { baseRoute } from "@/utils/consts";
 import { parseCookie } from "@/services/api/functions";
 import { cookieType } from "@/services/api/types";
+import process from "process";
 
 export default class TransactionsAPI {
   static init(cookies?: cookieType[]) {
@@ -11,7 +11,7 @@ export default class TransactionsAPI {
     };
 
     return axios.create({
-      baseURL: baseRoute + "/transactions",
+      baseURL: process.env.BASE_ROUTE + "/transactions",
       withCredentials: true,
       timeout: 31000,
       headers: headers,

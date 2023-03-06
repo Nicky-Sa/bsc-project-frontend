@@ -1,8 +1,8 @@
 import axios from "axios";
-import { baseRoute } from "@/utils/consts";
 import { updateUserType } from "@/services/api/User/types";
 import { parseCookie } from "@/services/api/functions";
 import { cookieType } from "@/services/api/types";
+import process from "process";
 
 export default class UserAPI {
   static init(cookies?: cookieType[]) {
@@ -12,7 +12,7 @@ export default class UserAPI {
     };
 
     return axios.create({
-      baseURL: baseRoute + "/users",
+      baseURL: process.env.BASE_ROUTE + "/users",
       withCredentials: true,
       timeout: 31000,
       headers: headers,

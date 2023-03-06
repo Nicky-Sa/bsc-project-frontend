@@ -6,8 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "up": "NODE_ENV=development yarn run build && yarn run start",
-    "production": "NODE_ENV=production yarn run build && yarn run start",
+    "start:dev": "dotenv -e .env.development -- next start",
+    "up:dev": "yarn run build && yarn run start:dev",
+    "up:production": "yarn run build && yarn run start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -18,6 +19,7 @@
     "axios": "^1.3.4",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
+    "dotenv-cli": "^7.0.0",
     "iconsax-react": "^0.0.8",
     "mapir-react-component": "^2.0.7",
     "next": "13.2.3",

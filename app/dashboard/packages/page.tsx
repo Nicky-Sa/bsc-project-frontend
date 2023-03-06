@@ -6,7 +6,6 @@ import Package from "@/Components/Domain/Packages/SinglePackage";
 
 const PackagesPage: () => Promise<JSX.Element> = async () => {
   const packagesProperties = await getAllPackages();
-
   return (
     <DarkContainer className={"w-full flex flex-row flex-wrap gap-12 items-start justify-center"} size={"free"}>
       {packagesProperties?.map((item: singlePackageType, i: number) => (

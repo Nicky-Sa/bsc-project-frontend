@@ -1,5 +1,5 @@
 import axios from "axios";
-import { baseRoute } from "@/utils/consts";
+import process from "process";
 
 export default class PackagesAPI {
   static init() {
@@ -8,8 +8,7 @@ export default class PackagesAPI {
     };
 
     return axios.create({
-      baseURL: baseRoute + "/packages",
-      withCredentials: true,
+      baseURL: process.env.BASE_ROUTE + "/packages",
       timeout: 31000,
       headers: headers,
     });

@@ -1,6 +1,6 @@
 import axios from "axios";
-import { baseRoute } from "@/utils/consts";
 import { authType } from "@/services/api/Auth/types";
+import * as process from "process";
 
 export default class AuthAPI {
   static init() {
@@ -9,7 +9,7 @@ export default class AuthAPI {
     };
 
     return axios.create({
-      baseURL: baseRoute + "/auth",
+      baseURL: process.env.BASE_ROUTE + "/auth",
       withCredentials: true,
       timeout: 31000,
       headers: headers,
