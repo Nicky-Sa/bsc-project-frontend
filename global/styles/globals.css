@@ -1,6 +1,6 @@
 @import "@/utils/assets/font/peyda/peyda-font.css";
-@import "antStyles.css";
 @import "loading.css";
+@import "antStyles.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

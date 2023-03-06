@@ -91,3 +91,20 @@
 .ant-empty .ant-empty-description{
   color: #E5E5E5;
 }
+
+.ant-pagination.ant-table-pagination.ant-table-pagination-right{
+  direction: ltr;
+}
+
+.ant-pagination .ant-pagination-item:not(.ant-pagination-item-active) a{
+  color: white;
+}
+.ant-pagination-prev, .ant-pagination-next{
+  margin-top: 5px;
+}
+.ant-pagination-disabled{
+  opacity: 40%;
+}
+.ant-pagination .ant-pagination-prev{
+  margin-inline-end: unset;
+}

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import "@/global/globals.css";
+import "@/global/styles/globals.css";
 import { ConfigProvider, Empty } from "antd";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
