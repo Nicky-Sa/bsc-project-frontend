@@ -1,7 +1,6 @@
 import { DeviceMessage, Home2, Map1, MessageQuestion, Moneys } from "iconsax-react";
 
-// export const baseRoute = process.env.NODE_ENV === "production" ? "/backend" : "http://localhost:5000";
-export const baseRoute = "http://localhost:5000";
+export const baseRoute = process.env.NODE_ENV === "production" ? "http://localhost:5000" : "http://localhost:5002";
 
 export const toastRedirectTimeout = 4500;
 

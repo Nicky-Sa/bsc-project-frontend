@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 3000",
-    "production": "yarn run build && yarn run start",
+    "start": "next start",
+    "up": "NODE_ENV=development yarn run build && yarn run start",
+    "production": "NODE_ENV=production yarn run build && yarn run start",
     "lint": "next lint"
   },
   "dependencies": {
