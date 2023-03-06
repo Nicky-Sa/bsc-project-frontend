@@ -7,7 +7,7 @@ type propsType<T> = {
   data: T[];
 };
 const Table = <T extends object>({columns, data}: propsType<T>) => {
-  return <AntTable columns={columns} dataSource={data} pagination={false} scroll={{ x: "max-content" }} rowKey={"id"} />;
+  return <AntTable columns={columns} dataSource={data} pagination = {{ pageSize: 3 }} scroll={{ x: "max-content" }} rowKey={"id"} />;
 
 };
 
