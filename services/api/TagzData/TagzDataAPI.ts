@@ -11,7 +11,7 @@ export default class TagzDataAPI {
     };
 
     return axios.create({
-      baseURL: process.env.BASE_ROUTE + "/tagz-data",
+      baseURL: process.env.NEXT_PUBLIC_BASE_ROUTE + "/tagz-data",
       withCredentials: true,
       timeout: 31000,
       headers: headers,
@@ -37,5 +37,4 @@ export default class TagzDataAPI {
   static getBalanceUsages = async (cookies: cookieType[]) => {
     return await this.init(cookies).get("/balanceUsages");
   };
-
 }

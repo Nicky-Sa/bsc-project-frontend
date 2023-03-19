@@ -6,8 +6,9 @@ import { childrenType } from "@/global/types";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'TAGZ - Dashboard',
-  description: 'Dashboard page',
+  title: "TAGZ - Dashboard",
+  description: "Dashboard page",
+  icons: "/fav.png",
 };
 
 export const revalidate = 10;

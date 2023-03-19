@@ -11,7 +11,7 @@ export default class TransactionsAPI {
     };
 
     return axios.create({
-      baseURL: process.env.BASE_ROUTE + "/transactions",
+      baseURL: process.env.NEXT_PUBLIC_BASE_ROUTE + "/transactions",
       withCredentials: true,
       timeout: 31000,
       headers: headers,

@@ -8,6 +8,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "TAGZ - Auth",
   description: "Authentication page",
+  icons: "/fav.png",
 };
 
 const AuthLayout: ({ children }: { children: any }) => Promise<JSX.Element> = async ({ children }) => {

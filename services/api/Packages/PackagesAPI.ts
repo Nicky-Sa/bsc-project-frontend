@@ -8,7 +8,7 @@ export default class PackagesAPI {
     };
 
     return axios.create({
-      baseURL: process.env.BASE_ROUTE + "/packages",
+      baseURL: process.env.NEXT_PUBLIC_BASE_ROUTE + "/packages",
       timeout: 31000,
       headers: headers,
     });

@@ -12,7 +12,7 @@ export default class UserAPI {
     };
 
     return axios.create({
-      baseURL: process.env.BASE_ROUTE + "/users",
+      baseURL: process.env.NEXT_PUBLIC_BASE_ROUTE + "/users",
       withCredentials: true,
       timeout: 31000,
       headers: headers,

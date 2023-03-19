@@ -9,7 +9,7 @@ export default class AuthAPI {
     };
 
     return axios.create({
-      baseURL: process.env.BASE_ROUTE + "/auth",
+      baseURL: process.env.NEXT_PUBLIC_BASE_ROUTE + "/auth",
       withCredentials: true,
       timeout: 31000,
       headers: headers,

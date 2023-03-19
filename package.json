@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "start:dev": "dotenv -e .env.development -- next start",
-    "up:dev": "yarn run build && yarn run start:dev",
-    "up:production": "yarn run build && yarn run start",
+    "up": "yarn run build && yarn run start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -17,7 +15,6 @@
     "@reduxjs/toolkit": "^1.9.3",
     "antd": "^5.2.3",
     "axios": "^1.3.4",
-    "dotenv-cli": "^7.0.0",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "iconsax-react": "^0.0.8",
