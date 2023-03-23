@@ -2,7 +2,7 @@
 import React from "react";
 import { Popover } from "antd";
 import type { ColumnsType } from "antd/es/table";
-import { messagesType } from "@/Components/Domain/Messages/types";
+import { messagesType } from "@/Components/Messages/types";
 import Table from "@/Components/UI/Table";
 
 const columns: ColumnsType<messagesType> = [

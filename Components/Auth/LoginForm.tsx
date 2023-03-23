@@ -30,7 +30,12 @@ const LoginForm: React.FC = () => {
   const onSubmit = authHandler(inputs, AuthAPI.login, router);
 
   return (
-    <Form buttonName={"ورود"} buttonDisabled={canSubmit(inputs, errors)} onSubmit={onSubmit}>
+    <Form
+      buttonText={"ورود"}
+      buttonDisabled={canSubmit(inputs, errors)}
+      onSubmit={onSubmit}
+      buttonDataTestId={"login-btn"}
+    >
       <Text
         name={"username"}
         state={inputs.username}
@@ -38,6 +43,7 @@ const LoginForm: React.FC = () => {
         title={"ایمیل (نام کاربری)"}
         error={errors.username}
         onChange={onChange}
+        dataTestId={"input-username"}
       />
       <Password
         name={"password"}
@@ -45,6 +51,7 @@ const LoginForm: React.FC = () => {
         placeholder={"رمز عبور"}
         title={"رمز عبور"}
         onChange={onChange}
+        dataTestId={"input-password"}
       />
     </Form>
   );

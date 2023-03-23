@@ -2,11 +2,11 @@
 import React from "react";
 import { ColumnsType } from "antd/es/table";
 import { Popover } from "antd";
-import { tagzLocationsType } from "@/Components/Domain/History/types";
+import { tagzLocationsType } from "@/Components/History/types";
 import dynamic from "next/dynamic";
 import Table from "@/Components/UI/Table";
 
-const LocationPopover = dynamic(() => import("@/Components/Domain/History/LocationPopover"), {
+const LocationPopover = dynamic(() => import("@/Components/History/LocationPopover"), {
   loading: () => <p>...</p>,
   ssr: false,
 });

@@ -1,7 +1,7 @@
 import React from "react";
-import BatteryUsage from "@/Components/Domain/DashboardHome/BatteryUsage";
-import CurrentLocationMap from "@/Components/Domain/DashboardHome/CurrentLocationMap";
-import MessagesTableContainer from "@/Components/Domain/DashboardHome/MessagesTableContainer";
+import BatteryUsage from "@/Components/Dashboard/DashboardHome/BatteryUsage";
+import CurrentLocationMap from "@/Components/Dashboard/DashboardHome/CurrentLocationMap";
+import MessagesTableContainer from "@/Components/Dashboard/DashboardHome/MessagesTableContainer";
 import { cookies } from "next/headers";
 import { getTagzBatteries, getTagzLocations, getTagzMessages, numberOfTagz } from "@/services/api/TagzData/handlers";
 

@@ -3,7 +3,7 @@ import React from "react";
 import { Tag } from "antd";
 import type { ColumnsType } from "antd/es/table";
 import { CheckCircleOutlined, CloseCircleOutlined, SyncOutlined } from "@ant-design/icons";
-import { transactionsType } from "@/Components/Domain/Finance/types";
+import { transactionsType } from "@/Components/Finance/types";
 import { reformat } from "@/utils/functions";
 import Table from "@/Components/UI/Table";
 

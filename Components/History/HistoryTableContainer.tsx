@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
-import HistoryTable from "@/Components/Domain/History/HistoryTable";
-import { tagzLocationsType } from "@/Components/Domain/History/types";
+import HistoryTable from "@/Components/History/HistoryTable";
+import { tagzLocationsType } from "@/Components/History/types";
 
 type propsType = {
   data: tagzLocationsType[];

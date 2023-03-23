@@ -5,4 +5,5 @@ export type inputType = {
   state: string;
   error?: string;
   onChange: (e: any) => void;
+  dataTestId?: string
 };

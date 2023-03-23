@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "types": [
+      "cypress",
+      "node",
+      "cypress-real-events",
+      "cypress-react-router",
+      "@testing-library/cypress"
+    ],
+    "isolatedModules": false,
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+  ]
+}

@@ -1,7 +1,7 @@
 import React from "react";
-import TransactionsTable from "@/Components/Domain/Finance/TrasnactionsTable";
+import TransactionsTable from "@/Components/Finance/TrasnactionsTable";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
-import { transactionsType } from "@/Components/Domain/Finance/types";
+import { transactionsType } from "@/Components/Finance/types";
 
 type propsType = {
   data: transactionsType[];

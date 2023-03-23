@@ -1,7 +1,7 @@
 import React from "react";
-import Tab from "@/Components/Domain/Auth/Tab";
-import LoginForm from "@/Components/Domain/Auth/LoginForm";
-import SignUpForm from "@/Components/Domain/Auth/SignupForm";
+import Tab from "@/Components/Auth/Tab";
+import LoginForm from "@/Components/Auth/LoginForm";
+import SignUpForm from "@/Components/Auth/SignupForm";
 
 const tabItems = [
   {

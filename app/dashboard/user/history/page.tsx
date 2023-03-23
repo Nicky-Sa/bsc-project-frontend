@@ -1,6 +1,6 @@
 import React from "react";
-import CurrentLocationMap from "@/Components/Domain/DashboardHome/CurrentLocationMap";
-import HistoryTableContainer from "@/Components/Domain/History/HistoryTableContainer";
+import CurrentLocationMap from "@/Components/Dashboard/DashboardHome/CurrentLocationMap";
+import HistoryTableContainer from "@/Components/History/HistoryTableContainer";
 import { getTagzLocations, numberOfTagz } from "@/services/api/TagzData/handlers";
 import { cookies } from "next/headers";
 

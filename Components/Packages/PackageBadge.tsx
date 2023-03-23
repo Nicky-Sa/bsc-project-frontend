@@ -4,10 +4,10 @@ import { Crown1 } from "iconsax-react";
 import IconText from "@/Components/UI/IconText";
 import Chips from "@/Components/UI/Chips";
 import { Popover } from "antd";
-import { packageType } from "@/Components/Domain/Packages/types";
-import PackagePopover from "@/Components/Domain/Packages/PackagePopover";
+import { packageType } from "@/Components/Packages/types";
+import PackagePopover from "@/Components/Packages/PackagePopover";
 
-import { extractPackageInfo } from "@/Components/Domain/Packages/functions";
+import { extractPackageInfo } from "@/Components/Packages/functions";
 
 const PackageBadge: React.FC<packageType> = ({ currentPackageLevel, currentBalance }) => {
   const [packageName, packageImg] = extractPackageInfo(currentPackageLevel as string);

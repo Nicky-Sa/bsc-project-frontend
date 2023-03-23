@@ -6,6 +6,7 @@ type propsType = {
   variation: "outline" | "fill" | "text" | "success";
   disabled?: boolean;
   onClick?: () => void;
+  dataTestId?: string;
 };
 
 const Button: React.FC<propsType & childrenType> = ({
@@ -14,6 +15,7 @@ const Button: React.FC<propsType & childrenType> = ({
   disabled = false,
   className: extraClass,
   onClick,
+  dataTestId
 }) => {
   let className = "";
   switch (variation) {
@@ -34,6 +36,7 @@ const Button: React.FC<propsType & childrenType> = ({
   return (
     <>
       <button
+        data-testid={dataTestId}
         onClick={onClick}
         disabled={disabled}
         className={classNames(

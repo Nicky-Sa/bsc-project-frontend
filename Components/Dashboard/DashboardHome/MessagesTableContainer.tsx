@@ -1,12 +1,12 @@
 import React from "react";
-import MessagesTable from "@/Components/Domain/Messages/MessagesTable";
+import MessagesTable from "@/Components/Messages/MessagesTable";
 
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import Button from "@/Components/UI/Button";
 import IconText from "@/Components/UI/IconText";
 import { ArrowLeft2 } from "iconsax-react";
 import Link from "next/link";
-import { messagesType } from "@/Components/Domain/Messages/types";
+import { messagesType } from "@/Components/Messages/types";
 
 type propsType = {
   data: messagesType[];

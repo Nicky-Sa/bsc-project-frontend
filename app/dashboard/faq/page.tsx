@@ -1,6 +1,6 @@
 import React from "react";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
-import Faq from "@/Components/Domain/FAQ/Faq";
+import Faq from "@/Components/FAQ/Faq";
 
 const DashboardPage: React.FC = () => {
   return (

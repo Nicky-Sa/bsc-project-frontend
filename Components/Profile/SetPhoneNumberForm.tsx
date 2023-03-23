@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Form from "@/Components/Form/Form";
 import { canSubmit, changeInputs, checkPhoneNumber } from "@/Components/Form/functions";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
-import { defaultFormType } from "@/Components/Domain/Profile/types";
+import { defaultFormType } from "@/Components/Profile/types";
 import { updateUser } from "@/services/api/User/handlers";
 import Text from "@/Components/Form/Text";
 import { useRouter } from "next/navigation";
@@ -31,7 +31,7 @@ const SetPhoneNumberForm: React.FC<defaultFormType> = ({ defaultValue }) => {
   return (
     <DarkContainer className={"w-full flex flex-col gap-6"} size={"free"}>
       <h6>تغییر شماره موبایل</h6>
-      <Form buttonName={"تایید"} onSubmit={onSubmit} buttonDisabled={canSubmit(inputs, errors)} buttonShape={"fit"}>
+      <Form buttonText={"تایید"} onSubmit={onSubmit} buttonDisabled={canSubmit(inputs, errors)} buttonShape={"fit"}>
         <Text
           name={"phoneNumber"}
           title={"شماره موبایل"}

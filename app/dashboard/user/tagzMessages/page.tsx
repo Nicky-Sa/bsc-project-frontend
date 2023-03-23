@@ -1,6 +1,6 @@
 import React from "react";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
-import MessagesTable from "@/Components/Domain/Messages/MessagesTable";
+import MessagesTable from "@/Components/Messages/MessagesTable";
 import { cookies } from "next/headers";
 import { getTagzMessages } from "@/services/api/TagzData/handlers";
 

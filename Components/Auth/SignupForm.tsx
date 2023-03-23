@@ -35,7 +35,7 @@ const SignUpForm: React.FC = () => {
   const onSubmit = authHandler(inputs, AuthAPI.signup, router);
 
   return (
-    <Form buttonName={"ثبت‌نام"} buttonDisabled={canSubmit(inputs, errors)} onSubmit={onSubmit}>
+    <Form buttonText={"ثبت‌نام"} buttonDisabled={canSubmit(inputs, errors)} onSubmit={onSubmit}>
       <Text
         name={"username"}
         state={inputs.username}

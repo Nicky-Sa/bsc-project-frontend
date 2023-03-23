@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import Chips from "@/Components/UI/Chips";
 import { Skeleton } from "antd";
 import { coordinateType } from "@/global/types";
-import { tagzLocationsType } from "@/Components/Domain/History/types";
+import { tagzLocationsType } from "@/Components/History/types";
 
 const Map = dynamic(() => import("@/Components/Map/Map"), {
   loading: () => <Skeleton active />,

@@ -8,8 +8,8 @@ import Modal from "@/Components/Notification/Modal";
 import { successNotify } from "@/Components/Notification/Toast";
 import { useSelector } from "react-redux";
 import { storeType } from "@/store";
-import { extractPackageInfo } from "@/Components/Domain/Packages/functions";
-import { singlePackageType } from "@/Components/Domain/Packages/types";
+import { extractPackageInfo } from "@/Components/Packages/functions";
+import { singlePackageType } from "@/Components/Packages/types";
 
 const Package: React.FC<singlePackageType> = ({ features, level }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

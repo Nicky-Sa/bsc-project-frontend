@@ -4,7 +4,7 @@ import { Eye, EyeSlash } from "iconsax-react";
 import Input from "@/Components/Form/Input";
 import { inputType } from "@/Components/Form/types";
 
-const Password: React.FC<inputType> = ({ title, name, placeholder, state, onChange, error }) => {
+const Password: React.FC<inputType> = ({ title, name, placeholder, state, onChange, error, dataTestId }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const eyesClassName = classNames(
@@ -39,6 +39,7 @@ const Password: React.FC<inputType> = ({ title, name, placeholder, state, onChan
         placeholder={placeholder}
         state={state}
         onChange={onChange}
+        dataTestId={dataTestId}
       />
     </div>
   );

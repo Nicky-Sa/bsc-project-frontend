@@ -1,4 +1,4 @@
-import { packageType } from "@/Components/Domain/Packages/types";
+import { packageType } from "@/Components/Packages/types";
 
 export type userState = {
   userInfo: {

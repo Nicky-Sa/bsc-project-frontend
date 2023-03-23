@@ -14,6 +14,7 @@ const Text: React.FC<propsType & inputType> = ({
   onChange,
   error,
   disabled = false,
+  dataTestId,
 }) => {
   return (
     <div className={"relative w-full"}>
@@ -26,6 +27,7 @@ const Text: React.FC<propsType & inputType> = ({
         state={state}
         onChange={onChange}
         disabled={disabled}
+        dataTestId={dataTestId}
       />
     </div>
   );

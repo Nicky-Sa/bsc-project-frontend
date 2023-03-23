@@ -18,6 +18,7 @@ const Input: React.FC<propsType & inputType> = ({
   onChange,
   error,
   disabled = false,
+  dataTestId,
 }) => {
   const [showError, setShowError] = useState(false);
   return (
@@ -29,6 +30,7 @@ const Input: React.FC<propsType & inputType> = ({
       <p className="b1 text-neutral-1 mb-1">{title}</p>
 
       <input
+        data-testid={dataTestId}
         autoComplete={"on"}
         autoFocus={name === "username"}
         onBlur={() => setShowError(true)}

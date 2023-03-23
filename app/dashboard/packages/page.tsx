@@ -1,8 +1,8 @@
 import React from "react";
 import DarkContainer from "@/Components/Dashboard/DarkContainer";
 import { getAllPackages } from "@/services/api/Packages/handlers";
-import { singlePackageType } from "@/Components/Domain/Packages/types";
-import Package from "@/Components/Domain/Packages/SinglePackage";
+import { singlePackageType } from "@/Components/Packages/types";
+import Package from "@/Components/Packages/SinglePackage";
 
 const PackagesPage: () => Promise<JSX.Element> = async () => {
   const packagesProperties = await getAllPackages();
