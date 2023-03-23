@@ -1,5 +1,5 @@
 import axios from "axios";
-import { updateUserType } from "@/services/api/User/types";
+import { buyNewPackageType, updateUserType } from "@/services/api/User/types";
 import { parseCookie } from "@/services/api/functions";
 import { cookieType } from "@/services/api/types";
 import process from "process";
@@ -12,7 +12,7 @@ export default class UserAPI {
     };
 
     return axios.create({
-      baseURL: process.env.NEXT_PUBLIC_BASE_ROUTE + "/users",
+      baseURL: process.env.NEXT_PUBLIC_BASE_ROUTE + "/user",
       withCredentials: true,
       timeout: 31000,
       headers: headers,
@@ -25,5 +25,9 @@ export default class UserAPI {
 
   static updateUser = async (data: updateUserType) => {
     return await this.init().put("/update", data);
+  };
+
+  static buyNewPackage = async (data: buyNewPackageType) => {
+    return await this.init().post("/buyNewPackage", data);
   };
 }

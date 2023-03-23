@@ -5,17 +5,19 @@ import "./backgrounds.css";
 import Button from "@/Components/UI/Button";
 import { reformat, sortById } from "@/utils/functions";
 import Modal from "@/Components/Notification/Modal";
-import { successNotify } from "@/Components/Notification/Toast";
 import { useSelector } from "react-redux";
 import { storeType } from "@/store";
 import { extractPackageInfo } from "@/Components/Packages/functions";
 import { singlePackageType } from "@/Components/Packages/types";
+import { buyNewPackage } from "@/services/api/User/handlers";
+import { useRouter } from "next/navigation";
 
 const Package: React.FC<singlePackageType> = ({ features, level }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [buttonState, setButtonState] = useState("active");
   const packageInfo = useSelector((state: storeType) => state.currentUserReducer.packageInfo);
   const [packageName, packageImg] = extractPackageInfo(level);
+  const router = useRouter();
 
   useEffect(() => {
     if (packageInfo.currentPackageLevel) {
@@ -31,9 +33,9 @@ const Package: React.FC<singlePackageType> = ({ features, level }) => {
     setIsModalOpen(true);
   };
 
-  const handleOk = () => {
+  const handleOk = async () => {
     setIsModalOpen(false);
-    successNotify("بسته موردنظر با موفقیت خریداری شد.");
+    await buyNewPackage({ packageLevel: level }, router)();
   };
 
   const handleCancel = () => {
