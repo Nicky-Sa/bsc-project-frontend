@@ -14,7 +14,7 @@ const Sidebar: React.FC = () => {
         "py-6 px-4 flex flex-col gap-12 items-center justify-between bg-primary-dark-5 overflow-y-auto min-h-full lg:rounded-2xl"
       }
     >
-      <Link href="/" className={"mt-2"}>
+      <Link href="/dashboard/user/home" className={"mt-2"}>
         <img className="w-1/2 h-auto m-auto" src="/logo.png" alt="logo" />
       </Link>
       <nav className="w-full flex-grow flex flex-col justify-start gap-6">

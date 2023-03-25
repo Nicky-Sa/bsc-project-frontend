@@ -26,6 +26,7 @@ export const authHandler =
 
 export const logoutHandler = (router: AppRouterInstance) => async () => {
   try {
+    localStorage.clear()
     const data = (await AuthAPI.logout()).data;
     successNotify(data.message);
     setTimeout(() => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "TAGZ - App",
@@ -8,7 +9,8 @@ export const metadata: Metadata = {
 };
 
 const Home: React.FC = () => {
-  return <div>Home page!</div>;
+  redirect("/auth");
+  return <p className={"b1 text-neutral-9"}>Home page!</p>;
 };
 
 export default Home;
