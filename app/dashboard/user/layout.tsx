@@ -1,6 +1,6 @@
 import React from "react";
 import SetUser from "@/Components/Dashboard/SetUser";
-import { cookies, headers } from "next/headers";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { getUser } from "@/services/api/User/handlers";
 
@@ -18,7 +18,7 @@ const DashboardLayout: ({ children }: { children: any }) => Promise<JSX.Element>
   return (
     <>
       <SetUser user={user} />
-      {user && children}
+      {children}
     </>
   );
 };

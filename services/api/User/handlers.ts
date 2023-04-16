@@ -28,16 +28,14 @@ export const updateUser = (updatedData: updateUserType, router: AppRouterInstanc
   }
 };
 
-export const buyNewPackage =
-  (packageLevelData: buyNewPackageType, router: AppRouterInstance) =>
-  async () => {
-    try {
-      const data = (await UserAPI.buyNewPackage(packageLevelData)).data;
-      successNotify(data.message);
-      setTimeout(() => {
-        router.replace("/dashboard/user/home");
-      }, toastRedirectTimeout);
-    } catch (error: any) {
-      errorNotify(translateErrors(error));
-    }
-  };
+export const buyNewPackage = (packageLevelData: buyNewPackageType, router: AppRouterInstance) => async () => {
+  try {
+    const data = (await UserAPI.buyNewPackage(packageLevelData)).data;
+    successNotify(data.message);
+    setTimeout(() => {
+      router.replace("/dashboard/user/home");
+    }, toastRedirectTimeout);
+  } catch (error: any) {
+    errorNotify(translateErrors(error));
+  }
+};

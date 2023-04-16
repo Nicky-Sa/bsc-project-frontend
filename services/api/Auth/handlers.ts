@@ -18,6 +18,7 @@ export const authHandler =
       successNotify(data.message);
       setTimeout(() => {
         router.replace("/dashboard/user/home");
+        router.refresh();
       }, toastRedirectTimeout);
     } catch (error) {
       errorNotify(translateErrors(error));
@@ -26,7 +27,7 @@ export const authHandler =
 
 export const logoutHandler = (router: AppRouterInstance) => async () => {
   try {
-    localStorage.clear()
+    localStorage.clear();
     const data = (await AuthAPI.logout()).data;
     successNotify(data.message);
     setTimeout(() => {
