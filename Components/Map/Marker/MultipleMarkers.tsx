@@ -11,13 +11,14 @@ const MarkerPopover = dynamic(() => import("@/Components/Map/Marker/MarkerPopove
 
 type propsType = {
   locations: coordinateType[];
+  tagIds: string[]
 };
 
-const MultipleMarkers: React.FC<propsType> = ({ locations }) => {
+const MultipleMarkers: React.FC<propsType> = ({ locations, tagIds }) => {
   return (
     <>
       {locations.map((location, i) => (
-        <MarkerPopover key={i} lon={location.lon} lat={location.lat} />
+        <MarkerPopover key={i} location={location} tagId={tagIds?.[i]} />
       ))}
     </>
   );

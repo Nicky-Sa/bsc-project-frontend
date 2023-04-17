@@ -19,6 +19,7 @@ type propsType = {
 };
 const CurrentLocationMap: React.FC<propsType> = ({ data, count }) => {
   const [locations, setLocations] = useState<coordinateType[]>([]);
+  const [tagIds, setTagIds] = useState<string[]>([]);
   useEffect(() => {
     let latestLocations = [];
 
@@ -32,6 +33,7 @@ const CurrentLocationMap: React.FC<propsType> = ({ data, count }) => {
 
     for (let item of latestLocations) {
       setLocations((prevLocations) => [...prevLocations, item.coordinate]);
+      setTagIds(prevTagIds => [...prevTagIds, item.tagId])
     }
   }, [count, data]);
   return (
@@ -42,7 +44,7 @@ const CurrentLocationMap: React.FC<propsType> = ({ data, count }) => {
         </Chips>
       </div>
       <Map height={450} zoom={11}>
-        {<MultipleMarkers locations={locations} />}
+        {<MultipleMarkers locations={locations} tagIds={tagIds} />}
       </Map>
     </DarkContainer>
   );

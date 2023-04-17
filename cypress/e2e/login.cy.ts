@@ -2,7 +2,7 @@
 describe("login to the dashboard", () => {
   beforeEach(() => {
     cy.viewport('macbook-13')
-    cy.visit("http://localhost:3000/auth")
+    cy.visit("http://localhost:3009/auth")
   })
 let getText = ""
   it("allows users to login", () => {
