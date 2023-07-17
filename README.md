@@ -7,4 +7,5 @@ In this project, I've implemented a front-end dashboard to illustrate mock locat
 - Empowered with Typescript 🧵
 - Using [Ant design](https://ant.design/components/) components 🐜
 - Using [Axios](https://axios-http.com/) for requests 🌐
+- Enriched with Tests using [Cypress](https://www.cypress.io/) 🧪
 - Backed by [Nest.js](https://nestjs.com/), you can check [this repo](https://github.com/Nicki-Di/bsc-project-backend/) for the back-end code 🐈
